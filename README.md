@@ -13,3 +13,6 @@
 - react-native-reanimated
 - react-native-gesture-handler
 - react-navigation-fluid-transitions
+
+![App Shot](./App/assets/imgs/app.gif)
+
