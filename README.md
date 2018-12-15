@@ -7,6 +7,8 @@
 - redux-saga
 - redux-persist
 - react-navigation
+- Immutablejs
+- redux-persist-transform-immutable
 - recompose
 - ramda
 - lodash
