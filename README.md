@@ -12,9 +12,14 @@
 - lodash
 - react-native-reanimated
 - react-native-gesture-handler
-- react-navigation-fluid-transitions
+- react-navigation-fluid-transitions,
+- react-navigation-material-bottom-tabs
+- react-native-material-bottom-navigation
 
-![App Shot](./App/assets/imgs/app.gif)
-
-###### to be continue ....
+#### Next
+ - create native animaiton components
+ - theme application
+ - Add Internaltionzation with multi languages
+ - Added setting page which controll all app 
+ - ...to be continued
 
