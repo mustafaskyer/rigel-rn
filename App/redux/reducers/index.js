@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
+import Immutable from "immutable";
 
+// func that take object and return .toJs
 
-export default combineReducers({
-    data: () => [1,2,3,4]
-})
+const rootReducer = combineReducers({
+  dd: () => Immutable.Map({ arr: [1, 2, 3, 4, 5, 6] }).toJS()
+});
+export default rootReducer;
