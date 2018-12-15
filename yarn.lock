@@ -2456,6 +2456,10 @@ image-size@^0.6.0:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
 
+immutable@^4.0.0-rc.12:
+  version "4.0.0-rc.12"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0-rc.12.tgz#ca59a7e4c19ae8d9bf74a97bdf0f6e2f2a5d0217"
+
 import-fresh@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-2.0.0.tgz#d81355c15612d386c61f9ddd3922d4304822a546"
@@ -3141,6 +3145,10 @@ js-yaml@^3.7.0, js-yaml@^3.9.0:
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+jsan@^3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/jsan/-/jsan-3.1.13.tgz#4de8c7bf8d1cfcd020c313d438f930cec4b91d86"
 
 jsbn@~0.1.0:
   version "0.1.1"
@@ -4647,6 +4655,12 @@ recompose@^0.30.0:
     react-lifecycles-compat "^3.0.2"
     symbol-observable "^1.0.4"
 
+redux-persist-transform-immutable@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/redux-persist-transform-immutable/-/redux-persist-transform-immutable-5.0.0.tgz#0ae277b4d8d662016f62af394df2572525ad6671"
+  dependencies:
+    remotedev-serialize "^0.1.0"
+
 redux-persist@^5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"
@@ -4719,6 +4733,12 @@ regjsparser@^0.3.0:
   resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.3.0.tgz#3c326da7fcfd69fa0d332575a41c8c0cdf588c96"
   dependencies:
     jsesc "~0.5.0"
+
+remotedev-serialize@^0.1.0:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/remotedev-serialize/-/remotedev-serialize-0.1.8.tgz#c99cb184e7f71a906162abc404be8ce33810205f"
+  dependencies:
+    jsan "^3.1.13"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -4892,6 +4912,10 @@ schedule@^0.3.0:
   resolved "https://registry.yarnpkg.com/schedule/-/schedule-0.3.0.tgz#1be2ab2fc2e768536269ce7326efb478d6c045e8"
   dependencies:
     object-assign "^4.1.1"
+
+seamless-immutable@^7.1.4:
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/seamless-immutable/-/seamless-immutable-7.1.4.tgz#6e9536def083ddc4dea0207d722e0e80d0f372f8"
 
 "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
   version "5.6.0"
