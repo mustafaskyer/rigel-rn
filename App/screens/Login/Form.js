@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Transition } from "react-navigation-fluid-transitions";
 import Ionicons from "react-native-vector-icons/Ionicons";
-
+import lang from '../../langs/index';
 import { Input, Button } from "../../components/index";
 
 import logo from "../../assets/imgs/cloud.png";
@@ -68,7 +68,7 @@ export default class Form extends Component {
             <View style={styles.imgContainer}>
               <Image style={[styles.img]} source={logo} />
               <Text style={[styles.title, { color: "#55bbff", textAlign:'center' }]}>
-                Welcome 
+                {lang('Hello')} 
               </Text>
             </View>
           </Transition>

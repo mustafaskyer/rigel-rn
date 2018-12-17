@@ -12,10 +12,14 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistor, store } from './store';
 
+
+//i18n
+import i18n from 'react-native-i18n';
 import Navigator from './navigation/Navigator';
 export default class App extends Component {
   constructor(){
     super()
+    i18n.locale = 'tr' // manually set language 
     EStyleSheet.build({
       ...colors,
       ...fonts
