@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 
+import EStyleSheet from 'react-native-extended-stylesheet';
+//@colors&fonts
+import colors from './assets/styles/colors';
+import fonts from './assets/styles/fonts';
 
 /**
  * @redux
@@ -11,11 +14,18 @@ import { persistor, store } from './store';
 
 import Navigator from './navigation/Navigator';
 export default class App extends Component {
+  constructor(){
+    super()
+    EStyleSheet.build({
+      ...colors,
+      ...fonts
+  });
+  }
   render() {
     return (
       <Provider store={store}>
           <PersistGate loading={false} persistor={persistor}>
-          <Navigator />
+            <Navigator />
           </PersistGate>
       </Provider>
     );
