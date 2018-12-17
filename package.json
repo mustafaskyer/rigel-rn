@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "ix": "react-native run-ios --simulator='iPhone X'",
+    "imx": "react-native run-ios --simulator='iPhone XS Max'",
+    "android": "react-native run-android"
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
@@ -13,6 +16,7 @@
     "ramda": "^0.25.0",
     "react": "16.5.0",
     "react-native": "0.57.0",
+    "react-native-extended-stylesheet": "^0.11.1",
     "react-native-gesture-handler": "^1.0.9",
     "react-native-material-bottom-navigation": "^1.0.2",
     "react-native-paper": "^2.2.4",
