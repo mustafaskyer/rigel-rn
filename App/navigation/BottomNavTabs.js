@@ -1,12 +1,6 @@
 import React from "react";
-import { createFluidNavigator } from "react-navigation-fluid-transitions";
 import { View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Login from "../screens/Login/index";
-import LoginForm from "../screens/Login/Form";
-import Home from "../screens/Home/index";
-
-console.disableYellowBox = true;
 
 import BottomNavigation, {
   ShiftingTab
@@ -52,17 +46,6 @@ export default class App extends React.Component {
       />
     </View>
   );
-
-  _renderScreens() {
-    switch (this.state.activeTab) {
-      case "one":
-        return <Login {...this.props} />;
-      case "two":
-        return <LoginForm {...this.props} />;
-      case "three":
-        return <Home {...this.props} />;
-    }
-  }
 
   render() {
     return (

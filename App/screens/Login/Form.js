@@ -10,10 +10,11 @@ import {
 import { Transition } from "react-navigation-fluid-transitions";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import { Input, Button, CapFirstLetter } from "../../components/index";
+import { Input, Button } from "../../components/index";
 
 import logo from "../../assets/imgs/cloud.png";
 import styles from "./styles";
+import publicStyles from 'react-native-extended-stylesheet';
 
 const { width } = Dimensions.get("window");
 
@@ -61,7 +62,7 @@ export default class Form extends Component {
     let animatedSeprator = runInterpolate(this.state.sepratorAnimation, 1);
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, additonalStyles.gg]}>
         <View style={[styles.screen1, { top: 40 }]}>
           <Transition shared="circle">
             <View style={styles.imgContainer}>
@@ -180,3 +181,9 @@ export default class Form extends Component {
     );
   }
 }
+
+const additonalStyles = publicStyles.create({
+  gg: {
+    backgroundColor: '$MAIN'
+  }
+})
