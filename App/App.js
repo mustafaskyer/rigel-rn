@@ -16,6 +16,9 @@ import { persistor, store } from './store';
 //i18n
 import i18n from 'react-native-i18n';
 import Navigator from './navigation/Navigator';
+
+
+console.disableYellowBox = true;
 export default class App extends Component {
   constructor(){
     super()
