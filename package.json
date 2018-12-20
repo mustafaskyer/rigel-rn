@@ -1,5 +1,10 @@
 {
   "name": "SkyerStarter",
+  "author": {
+    "name": "Mustafa Elsayed",
+    "email": "mustafaskir@gmail.com",
+    "url": "https://twitter.com/skirmustafa"
+  },
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -15,7 +20,7 @@
     "lodash": "^4.17.11",
     "ramda": "^0.25.0",
     "react": "^16.7.0-alpha.2",
-    "react-native": "0.57.0",
+    "react-native": "^0.57.5",
     "react-native-extended-stylesheet": "^0.11.1",
     "react-native-gesture-handler": "^1.0.9",
     "react-native-i18n": "^2.0.15",
@@ -35,10 +40,12 @@
     "seamless-immutable": "^7.1.4"
   },
   "devDependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-native": "^0.57.19",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.49.1",
-    "react-test-renderer": "16.5.0"
+    "schedule": "^0.4.0"
   },
   "jest": {
     "preset": "react-native"
