@@ -51,7 +51,7 @@ const tabs = [
 
 
 const  BottomTabs = (props) => {
-  let badge = _.map(props)
+  // let badge = _.map(props)
   const renderIcon = icon => ({ isActive }) => (
     <Icon size={24} color="white" name={icon} />
   );
@@ -65,8 +65,8 @@ const  BottomTabs = (props) => {
           label={tab.label}
           renderIcon={renderIcon(tab.icon)}
           renderBadge={( isActive ) => {
-            return isActive && props.badge && tab.hasBadge && (
-              <Badge style={{ backgroundColor:'#FFF' }}><Text>{props.badge}</Text></Badge>
+            return tab.badge && (
+              <Badge style={{ backgroundColor:'#FFF' }}><Text>{tab.badge}</Text></Badge>
             )
           }}
           showBadge={true}
@@ -92,24 +92,24 @@ const  BottomTabs = (props) => {
 }
 
 const comp = compose(
-  withProps(props => ({ ...props })),
+  withProps(props => {
+    // map badgesReducer with Tabs
+    _.filter(props.badges, (badge) => {
+      _.filter(tabs, tab => tab.key === badge.label)
+        let fIndex = _.findIndex(tabs, { key: badge.label })
+        tabs[fIndex] = { ...tabs[fIndex], ... badge  }
+    });
+    return { ...props }
+    
+  }),
   withStateHandlers(props => ({ activeTab: 'Home' }), {
     setActiveTab: props => ev => {
-      // let badges = [ { label:'Home', badge: 17 } , {label:'Likes', badge: '77' } ]
-      // let isActive = _.find(props.badges, { label: ev })
-      // let badge = isActive && isActive.badge
-      // console.log('@props', props)
-      console.log('@ev', ev)
-      return { ...props, activeTab: ev.activeTab, badge: ev.badges }
+      return { ...props, activeTab: ev.activeTab, }
     }
   }),
   lifecycle({
-    componentDidUpdate(prevProps, prevState) {
-      // console.log('@props', prevProps)
-      // console.log('@state', prevState)
-    },
     componentWillMount() {
-      // this.setState()
+      // no thing for now
     }
   })
 )(BottomTabs)
