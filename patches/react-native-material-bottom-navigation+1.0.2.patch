@@ -1,0 +1,18 @@
+patch-package
+--- a/node_modules/react-native-material-bottom-navigation/lib/TabList.js
++++ b/node_modules/react-native-material-bottom-navigation/lib/TabList.js
+@@ -53,7 +53,7 @@ export default class TabList extends React.PureComponent {
+     this.isControlled = props.activeTab != null
+ 
+     this.state = {
+-      activeTab: this.isControlled ? props.activeTab : props.tabs[0].key
++      activeTab: this.isControlled ? props.activeTab : props.tabs[Math.floor(props.defaultTabIndex) || 0].key
+     }
+   }
+ 
+new file mode 120000
+--- /dev/null
++++ b/node_modules/react-native-material-bottom-navigation/node_modules/.bin/react-native
+@@ -0,0 +1 @@
++../../../react-native/local-cli/wrong-react-native.js
+\ No newline at end of file
