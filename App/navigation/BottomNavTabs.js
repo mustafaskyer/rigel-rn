@@ -23,7 +23,7 @@ const tabs = [
     label: "Notifications",
     barColor: "#B71C1C",
     pressColor: "rgba(255, 255, 255, 0.16)",
-    badge: 19
+    hasBadge: true
   },
   {
     key: "Home",
@@ -38,7 +38,7 @@ const tabs = [
     label: "Likes",
     barColor: "#B71C1C",
     pressColor: "rgba(255, 255, 255, 0.16)",
-    badge: 77
+    hasBadge: true
   },
   {
     key: "profile",
@@ -51,7 +51,7 @@ const tabs = [
 
 
 const  BottomTabs = (props) => {
-  
+  let badge = _.map(props)
   const renderIcon = icon => ({ isActive }) => (
     <Icon size={24} color="white" name={icon} />
   );
@@ -64,9 +64,9 @@ const  BottomTabs = (props) => {
           key={tab.key}
           label={tab.label}
           renderIcon={renderIcon(tab.icon)}
-          renderBadge={() => {
-            return tab.badge && (
-              <Badge style={{ backgroundColor:'#FFF' }}><Text>{tab.badge}</Text></Badge>
+          renderBadge={( isActive ) => {
+            return isActive && props.badge && tab.hasBadge && (
+              <Badge style={{ backgroundColor:'#FFF' }}><Text>{props.badge}</Text></Badge>
             )
           }}
           showBadge={true}
@@ -78,7 +78,10 @@ const  BottomTabs = (props) => {
   return(
     <BottomNavigation
         onTabPress={newTab => {
-          props.setActiveTab(newTab.key)
+          let badge = _.find(props.badges, { label: newTab.key })
+          console.log('@badge____', badge)
+
+          props.setActiveTab({ activeTab: newTab.key, badges: badge && badge.badge })
           props.navigation.navigate(newTab.key)
         }}
         renderTab={renderTab}
@@ -92,17 +95,18 @@ const comp = compose(
   withProps(props => ({ ...props })),
   withStateHandlers(props => ({ activeTab: 'Home' }), {
     setActiveTab: props => ev => {
-      let badges = [ { label:'Home', badge: 17 } , {label:'Likes', badge: '77' } ]
-      let isActive = _.find(badges, { label: ev })
-      let badge = isActive && isActive.badge
-      
-      return { ...props, activeTab: ev, badge }
+      // let badges = [ { label:'Home', badge: 17 } , {label:'Likes', badge: '77' } ]
+      // let isActive = _.find(props.badges, { label: ev })
+      // let badge = isActive && isActive.badge
+      // console.log('@props', props)
+      console.log('@ev', ev)
+      return { ...props, activeTab: ev.activeTab, badge: ev.badges }
     }
   }),
   lifecycle({
     componentDidUpdate(prevProps, prevState) {
-      console.log('@props', prevProps)
-      console.log('@state', prevState)
+      // console.log('@props', prevProps)
+      // console.log('@state', prevState)
     },
     componentWillMount() {
       // this.setState()
@@ -110,9 +114,9 @@ const comp = compose(
   })
 )(BottomTabs)
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ badges }) => {
   return {
-    data: state.dd
+    badges: badges.badges
   }
 }
 export default connect(mapStateToProps)(comp)

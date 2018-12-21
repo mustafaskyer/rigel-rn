@@ -10,18 +10,18 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Bottom1 = () => <View style={{ flex:1, backgroundColor:'#388E3C' }}></View>
 const Bottom2 = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Search = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Notifications = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Likes = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
 
 
 const BottomTabs = createBottomTabNavigator({
-  Home: {
-    screen: Home,
-  },
-  Login: {
-    screen: Bottom1,
-  },
-  LoginForm: {
-    screen: Bottom2,
-  },
+  Home: { screen: Home },
+  Search: { screen: Search },
+  Notifications: { screen: Notifications },
+  Likes: { screen: Likes },
+  Profile: { screen: Profile },
 },{
   tabBarComponent: props => <BottomNavTabs {...props} />,
 })
