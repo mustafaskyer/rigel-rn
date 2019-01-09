@@ -1,27 +1,14 @@
-# React Native Starter App
-- react native @0.57.0
-- react 16.5.0
-##### Packages
-- redux
-- react-redux
-- redux-saga
-- redux-persist
-- react-navigation
-- Immutablejs
-- redux-persist-transform-immutable
-- recompose
-- ramda
-- lodash
-- react-native-reanimated
-- react-native-gesture-handler
-- react-navigation-fluid-transitions,
-- react-navigation-material-bottom-tabs
-- react-native-material-bottom-navigation
+# React Native Starter App With Hooks
+New Updates with Hooks, Works Perfect
 
-#### Next
- - create native animaiton components
- - theme application
- - Add Internaltionzation with multi languages
- - Added setting page which controll all app 
- - ...to be continued
+whats new ?
+- updated react version to 16.8.0-alpha.0
+- updated react-native version to 0.57.8
+- Added react-native-tab-view library, but used with hooks
+- Added chroma-js
+- Added react-native-linear-gradient
+- updated profile with twiter profile animation with reanimated library & hooks
+- updated smoe colors and styles
 
+
+> created by @skirmustafa twiter account
