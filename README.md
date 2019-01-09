@@ -1,5 +1,5 @@
 # React Native Starter App With Hooks
-New Updates with Hooks, Works Perfect
+New Updates with Hooks
 
 whats new ?
 - updated react version to 16.8.0-alpha.0
