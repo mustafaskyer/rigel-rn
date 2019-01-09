@@ -1,5 +1,5 @@
 # React Native Starter App With Hooks
-New Updates with Hooks
+New Updates with Hooks, Works Perfect
 
 whats new ?
 - updated react version to 16.8.0-alpha.0
@@ -27,4 +27,4 @@ whats new ?
 ------------
 
 
-> created by @skirmustafa twiter account
+> created by [@skirmustafa](https://twitter.com/skirmustafa "@skirmustafa")
