@@ -6,21 +6,22 @@ import Login from '../screens/Login/index';
 import LoginForm from '../screens/Login/Form';
 import Home from '../screens/Home/index';
 import BottomNavTabs from './BottomNavTabs';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Messages from '../screens/Messages';
+import Notifications from '../screens/Notifications';
+import Profile from '../screens/Profile';
+import Search from '../screens/Search';
 
-const Bottom1 = () => <View style={{ flex:1, backgroundColor:'#388E3C' }}></View>
-const Bottom2 = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
-const Search = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
-const Notifications = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
-const Likes = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
-const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+// const Search = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+// const Notifications = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+// const Likes = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+// const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
 
 
 const BottomTabs = createBottomTabNavigator({
   Home: { screen: Home },
   Search: { screen: Search },
   Notifications: { screen: Notifications },
-  Likes: { screen: Likes },
+  Messages: { screen: Messages },
   Profile: { screen: Profile },
 },{
   tabBarComponent: props => <BottomNavTabs {...props} />,

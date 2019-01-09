@@ -12,5 +12,10 @@ export default PublicStyles =  StyleSheet.create({
     // ... any public styles will be Welcome here
     mainStyle: {
         backgroundColor:'$MAIN'
-    }
+    },
+    fullCenter:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 })

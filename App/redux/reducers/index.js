@@ -5,6 +5,6 @@ import Immutable from "immutable";
 
 const rootReducer = combineReducers({
   dd: () => Immutable.Map({ arr: [1, 2, 3, 4, 5, 6] }).toJS(),
-  badges: () => Immutable.Map({ badges: [{ label:'Notifications', badge: 3 } , {label:'Likes', badge: '11' }] }).toJS()
+  badges: () => Immutable.Map({ badges: [{ label:'Notifications', badge: 3 } , {label:'Messages', badge: '11' }] }).toJS()
 });
 export default rootReducer;

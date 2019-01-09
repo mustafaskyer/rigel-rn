@@ -14,14 +14,14 @@ const tabs = [
     key: "Search",
     icon: "ios-search",
     label: "Search",
-    barColor: "#388E3C",
+    barColor: "#3f5256",
     pressColor: "rgba(255, 255, 255, 0.16)",
   },
   {
     key: "Notifications",
     icon: "ios-notifications",
     label: "Notifications",
-    barColor: "#B71C1C",
+    barColor: "#b4b2af",
     pressColor: "rgba(255, 255, 255, 0.16)",
     hasBadge: true
   },
@@ -29,29 +29,28 @@ const tabs = [
     key: "Home",
     icon: "ios-home",
     label: "Home",
-    barColor: "#55bbff",
+    barColor: "#5b7d7f",
     pressColor: "rgba(255, 255, 255, 0.16)",
   },
   {
-    key: "Likes",
-    icon: "ios-heart",
-    label: "Likes",
-    barColor: "#B71C1C",
+    key: "Messages",
+    icon: "ios-mail",
+    label: "Messages",
+    barColor: "#9fa89b",
     pressColor: "rgba(255, 255, 255, 0.16)",
     hasBadge: true
   },
   {
-    key: "profile",
+    key: "Profile",
     icon: "ios-contact",
     label: "Profile",
-    barColor: "#B71C1C",
+    barColor: "#4b78b3",
     pressColor: "rgba(255, 255, 255, 0.16)",
   },
 ];
 
 
 const  BottomTabs = (props) => {
-  // let badge = _.map(props)
   const renderIcon = icon => ({ isActive }) => (
     <Icon size={24} color="white" name={icon} />
   );
@@ -79,8 +78,6 @@ const  BottomTabs = (props) => {
     <BottomNavigation
         onTabPress={newTab => {
           let badge = _.find(props.badges, { label: newTab.key })
-          console.log('@badge____', badge)
-
           props.setActiveTab({ activeTab: newTab.key, badges: badge && badge.badge })
           props.navigation.navigate(newTab.key)
         }}
