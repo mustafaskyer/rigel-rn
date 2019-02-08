@@ -10,7 +10,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Bottom1 = () => <View style={{ flex:1, backgroundColor:'#388E3C' }}></View>
 const Bottom2 = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
-const Search = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Search = () => <View style={{ flex:1, backgroundColor:'#388E3C' }}></View>
 const Notifications = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
 const Likes = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
 const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
