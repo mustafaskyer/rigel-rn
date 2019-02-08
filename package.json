@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "immer": "^2.0.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.11",
     "ramda": "^0.25.0",
