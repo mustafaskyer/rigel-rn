@@ -3,13 +3,14 @@ import { View, Text } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { withProps, withStateHandlers, compose, lifecycle } from 'recompose';
 import _ from 'lodash';
+import produce from 'immer';
 import BottomNavigation, {
   ShiftingTab,
   Badge
 } from "react-native-material-bottom-navigation";
 import { connect } from 'react-redux';
 
-const tabs = [
+const tabs = produce([
   {
     key: "Search",
     icon: "ios-search",
@@ -44,11 +45,10 @@ const tabs = [
     key: "profile",
     icon: "ios-contact",
     label: "Profile",
-    barColor: "#B71C1C",
+    barColor: "#388E3C",
     pressColor: "rgba(255, 255, 255, 0.16)",
   },
-];
-
+], draft => {});
 
 const  BottomTabs = (props) => {
   // let badge = _.map(props)
@@ -79,8 +79,6 @@ const  BottomTabs = (props) => {
     <BottomNavigation
         onTabPress={newTab => {
           let badge = _.find(props.badges, { label: newTab.key })
-          console.log('@badge____', badge)
-
           props.setActiveTab({ activeTab: newTab.key, badges: badge && badge.badge })
           props.navigation.navigate(newTab.key)
         }}
@@ -93,14 +91,14 @@ const  BottomTabs = (props) => {
 
 const comp = compose(
   withProps(props => {
-    // map badgesReducer with Tabs
-    _.filter(props.badges, (badge) => {
-      _.filter(tabs, tab => tab.key === badge.label)
-        let fIndex = _.findIndex(tabs, { key: badge.label })
-        tabs[fIndex] = { ...tabs[fIndex], ... badge  }
-    });
-    return { ...props }
-    
+    // map badgesReducer with Tab
+    produce(tabs, draft => {
+      const findIndexByObjKey = (find, key) => _.findIndex(find, { key })
+      const likesIndex = findIndexByObjKey(tabs, 'Likes')
+      const notifyIndex = findIndexByObjKey(tabs, 'Notifications')
+      tabs[likesIndex].badge = props.badges.likes
+      tabs[notifyIndex].badge = props.badges.notifys
+    })
   }),
   withStateHandlers(props => ({ activeTab: 'Home' }), {
     setActiveTab: props => ev => {
@@ -116,7 +114,7 @@ const comp = compose(
 
 const mapStateToProps = ({ badges }) => {
   return {
-    badges: badges.badges
+    badges
   }
 }
 export default connect(mapStateToProps)(comp)
