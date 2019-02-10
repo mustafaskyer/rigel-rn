@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Dimensions, StatusBar } from 'react-native';
 import { Transition } from 'react-navigation-fluid-transitions';
 import Header from './Header';
-import Carts from './Carts';
+import LottieView from 'lottie-react-native';
 
 /****
  * @connect
@@ -30,18 +30,30 @@ class Home extends Component {
       },
       2500,
     )
+    this.animation.play();
+    // Or set a specific startFrame and endFrame with:
+    this.animation.play(30, 120);
   }
 
   render() {
     return (
       <View style={[styles.container]}>
-        <Transition appear='horizontal'>
-            <Header />
-        </Transition>
 
-        <View style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
+        <LottieView
+          ref={animation => {
+            this.animation = animation;
+          }}
+          source={require('../../assets/animations/LottieLogin.json')}
+          loop={false}
+          style={{ flex:1, width:'100%', height: '100%' }}
+        />
+        {/* <Transition appear='horizontal'>
+            <Header />
+        </Transition> */}
+
+        {/* <View style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
           <Text>HOME</Text>
-        </View>
+        </View> */}
         
 
       </View>
