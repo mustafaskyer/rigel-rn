@@ -13,4 +13,6 @@
 - [ ] add airbnb maps
 - [ ] add new components
 - [ ] add onesignal setup
-<img url="https://github.com/mustafaskir/react_native_starter_app/blob/master/screenR.gif" width="200px height="300px">
+
+![alt text](https://github.com/mustafaskir/react_native_starter_app/blob/master/screenR.gif)
+
