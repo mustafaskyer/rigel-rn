@@ -137,11 +137,11 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-reanimated')
+    implementation project(':react-native-gesture-handler')
     compile project(':lottie-react-native')
     compile project(':react-native-i18n')
     compile project(':react-native-vector-icons')
-    compile project(':react-native-reanimated')
-    compile project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
