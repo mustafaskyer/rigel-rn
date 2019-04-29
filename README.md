@@ -1,27 +1,17 @@
-# React Native Starter App
-- react native @0.57.0
-- react 16.5.0
-##### Packages
-- redux
-- react-redux
-- redux-saga
-- redux-persist
-- react-navigation
-- Immutablejs
-- redux-persist-transform-immutable
-- recompose
-- ramda
-- lodash
-- react-native-reanimated
-- react-native-gesture-handler
-- react-navigation-fluid-transitions,
-- react-navigation-material-bottom-tabs
-- react-native-material-bottom-navigation
+### React Native Starter App
 
-#### Next
- - create native animaiton components
- - theme application
- - Add Internaltionzation with multi languages
- - Added setting page which controll all app 
- - ...to be continued
+#### Todo list
+------------
 
+
+> 
+- [x] updated react-native to `0.59.6`
+- [x] update react-native-reanimated  to `1.0.1`
+- [x] update react-native-gesture-handler to `1.1.0`
+- [x] added react-native-lottie
+- [ ] add mapbox-gl
+- [ ] add airbnb maps
+- [ ] add new components
+- [ ] add onesignal setup
+
+[![sample](sample "sample")](./screenR.gif "sample")
