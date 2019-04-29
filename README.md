@@ -14,4 +14,4 @@
 - [ ] add new components
 - [ ] add onesignal setup
 
-[![sample](sample "sample")](https://github.com/mustafaskir/react_native_starter_app/blob/master/screenR.gif)
+![alt text](https://github.com/mustafaskir/react_native_starter_app/blob/master/screenR.gif)
