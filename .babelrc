@@ -4,9 +4,11 @@
     ["module-resolver", {
       "root": ["./App"],
       "alias": {
+        "root": "./App",
         "screens": "./App/screens",
         "components": "./App/components",
-        "assets": "./App/assets",
+        "styles": "./App/assets/styles",
+        "imgs": "./App/assets/imgs",
         "langs": "./App/langs/index",
         "redux-actions": "./App/redux/actions",
         "redux-reducer": "./App/redux/reducers"
