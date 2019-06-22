@@ -1,11 +1,13 @@
 import React, { } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from 'styles/public';
 const Login = props => {
     return (
         <View style={styles.full}>
             <View style={styles.fullcenter}>
-                <Text>Login</Text>
+                <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
+                    <Text>Login</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
