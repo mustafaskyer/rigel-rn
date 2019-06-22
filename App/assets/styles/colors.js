@@ -1,7 +1,7 @@
 //@constants
 export default {
     $MAIN: '#FFF',
-    $SECONDARY: '',
+    $second: '#5a5a5a',
     $PUBLIC: '',
     $PRIVATE: '',
     $OTHERS: '',
