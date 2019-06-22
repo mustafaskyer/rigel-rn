@@ -1,3 +1,32 @@
+/**
+ * 
+ * 
+ * 
+const Search = () => <View style={{ flex:1, backgroundColor:'#388E3C' }}></View>
+const Notifications = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Likes = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View>
+
+
+
+
+
+ * 
+ * // const BottomTabs = createBottomTabNavigator({
+//   Home: { screen: Home },
+//   Search: { screen: Search },
+//   Notifications: { screen: Notifications },
+//   Likes: { screen: Likes },
+//   Profile: { screen: Profile },
+// },{
+//   tabBarComponent: props => <BottomNavTabs {...props} />,
+// })
+
+
+ */
+
+
+
 import React from "react";
 import { View, Text } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
