@@ -12,15 +12,15 @@ const Profile = () => <View style={{ flex:1, backgroundColor:'#B71C1C' }}></View
 
 
  * 
- * // const BottomTabs = createBottomTabNavigator({
-//   Home: { screen: Home },
-//   Search: { screen: Search },
-//   Notifications: { screen: Notifications },
-//   Likes: { screen: Likes },
-//   Profile: { screen: Profile },
-// },{
-//   tabBarComponent: props => <BottomNavTabs {...props} />,
-// })
+ * const BottomTabs = createBottomTabNavigator({
+   Home: { screen: Home },
+   Search: { screen: Search },
+   Notifications: { screen: Notifications },
+   Likes: { screen: Likes },
+   Profile: { screen: Profile },
+  },{
+    tabBarComponent: props => <BottomNavTabs {...props} />,
+  })
 
 
  */
