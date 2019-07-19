@@ -1,7 +1,9 @@
 import { combineReducers } from "redux";
-import badges from './Badges';
 
+import badges from './Badges';
+import users from './UsersReducer';
 const rootReducer = combineReducers({
-  badges
+  badges,
+  users
 });
 export default rootReducer;

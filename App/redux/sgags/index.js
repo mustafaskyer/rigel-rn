@@ -1,10 +1,11 @@
 
-import { all } from 'redux-saga/effects'
+import { all, fork } from 'redux-saga/effects'
 
+// sagas
+import { watchLoadUsers } from './usersSaga';
 
-// const sayHello = () => console.log('Hello ...')
 export default function* rootSaga(){
     yield all([
-        // sayHello,
+        fork(watchLoadUsers),
     ])
 }
