@@ -14,7 +14,8 @@
         "redux-reducer": "./App/redux/reducers",
         "configs": "./App/configs",
         "api": "./App/redux/apis/",
-        "util":"./App/util"
+        "util":"./App/util",
+        "config": "./app.config.js"
       },
       "extensions": [".js"]
     }]
