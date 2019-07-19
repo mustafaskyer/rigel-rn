@@ -1,8 +1,4 @@
-import Login from 'screens/Login/index';
-import UserDetail from 'screens/UserDetail';
+import auth from "./Auth/index";
+import reistered from "./Registered/index";
 
-export {
-    Login,
-    UserDetail
-}
-
+module.exports =  { auth, reistered }
