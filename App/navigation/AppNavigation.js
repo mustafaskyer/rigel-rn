@@ -1,79 +1,48 @@
-import React from 'react';
-import { createAppContainer, createStackNavigator , createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation';
-import {  createFluidNavigator } from 'react-navigation-fluid-transitions';
-import { 
-  Login,
-  UserDetail
-} from 'screens/index';
+import React from "react";
+import {
+  createAppContainer, createStackNavigator,
+  createBottomTabNavigator, createSwitchNavigator,
+  createDrawerNavigator
+} from "react-navigation";
 
-// works like a splash screen
-import Index from 'root/Index';
-import Drawer from './Drawer';
-import BottomTabComponent from './BottomTabs';
+import navConfigs from "./config";
+import mainConfig from 'config';
+// #Splash Screen (Later ✋)
+import Index from "root/Index";
 
-// Auth Screens
-const AuthScreens = createFluidNavigator({
-  Login,
-})
+import Drawer from "./Drawer";
+import BottomTabComponent from "./BottomTabs";
+import { auth, reistered } from "screens/";
 
-const FluidT = createStackNavigator({
-  Home: {
-    screen: Index,
-  },
-  Login: {
-    screen: Login,
-  },
-  Detail: {
-    screen: UserDetail
+/** Auth Screens */
+const Auth = createStackNavigator({...auth},navConfigs.options);
+
+/** Registered Screens */
+const Registered = createStackNavigator({...reistered},navConfigs.options);
+
+
+/** Drawer Screens */
+
+  const DrawerScreens = createDrawerNavigator({...reistered},{
+    contentComponent: props => <Drawer {...props} />,
+    ...navConfigs.drawerOptions
   }
-},{
-  headerMode: 'float'
-})
+);
 
-// Drawer
-const UserScreensWithDrawerContainer = createDrawerNavigator({
-  ...BottomTabs,
-  FluidT
-},{
-  contentComponent: props => <Drawer {...props} />,
-  drawerBackgroundColor: '#FFF',
-  drawerType: 'front',
-  overlayColor: '#FFF',
-  // drawerLockMode: 'unlocked',
-  drawerWidth: 300,
-});
-
-
-// bottom tabs
-const BottomTabs = createBottomTabNavigator({
-  Drawer:{ screen: UserScreensWithDrawerContainer }
- },{
-   tabBarOptions: {
-    activeTintColor: '#e91e63',
-    labelStyle: {
-      fontSize: 12,
-    },
-    style:{
-      borderWidth:1
-    }
+/** Tabs */
+const BottomTabs = createBottomTabNavigator({ Drawer: { screen: DrawerScreens }},
+  {
+    ...navConfigs.tabsOptions,
+    tabBarComponent: () => <BottomTabComponent />
+  }
+);
+const stackNavigator = createSwitchNavigator(
+  {
+    ...navConfigs.build(BottomTabs,DrawerScreens),
+    Registered,
+    Auth
   },
-  tabBarComponent: () => <BottomTabComponent />
- })
+  navConfigs.stackOptions
+);
 
-// stackNavigatorOptions & stackNavigator
-const stackNavOptions = {
-  navigationOptions: { 
-    gesturesEnabled: false,
-   },
-  initialRouteName: 'BottomTabs',
-}
-const stackNavigator = 
-createSwitchNavigator({
-    Index,
-    AuthScreens,
-    UserScreensWithDrawerContainer,
-    BottomTabs
-  },stackNavOptions)
-  
-  // hoc stackNavigator
-  export default createAppContainer(stackNavigator)
+export default createAppContainer(stackNavigator);
