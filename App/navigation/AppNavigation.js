@@ -1,8 +1,9 @@
 import React from 'react';
-import { createAppContainer, createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator , createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation';
 import {  createFluidNavigator } from 'react-navigation-fluid-transitions';
 import { 
-  Login
+  Login,
+  UserDetail
 } from 'screens/index';
 
 // works like a splash screen
@@ -15,22 +16,31 @@ const AuthScreens = createFluidNavigator({
   Login,
 })
 
-// Drawer
-const UserScreensWithDrawerContainer = createDrawerNavigator({
-  ...BottomTabs,
+const FluidT = createStackNavigator({
   Home: {
     screen: Index,
   },
   Login: {
     screen: Login,
   },
+  Detail: {
+    screen: UserDetail
+  }
+},{
+  headerMode: 'float'
+})
+
+// Drawer
+const UserScreensWithDrawerContainer = createDrawerNavigator({
+  ...BottomTabs,
+  FluidT
 },{
   contentComponent: props => <Drawer {...props} />,
   drawerBackgroundColor: '#FFF',
   drawerType: 'front',
   overlayColor: '#FFF',
-  initialRouteName: 'Home',
-  drawerWidth: 300
+  // drawerLockMode: 'unlocked',
+  drawerWidth: 300,
 });
 
 
