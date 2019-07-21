@@ -6,7 +6,6 @@ import { loadUserImgs } from 'redux-actions/usersAction';
 
 // components
 import RenderImage from 'components/RenderImage';
-import UserDetail from 'screens/UserDetail';
 
 const Index = (props) => {
     const [images, setImages] = useState(null)
