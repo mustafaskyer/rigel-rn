@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
-    "@shoutem/theme": "^0.11.3",
-    "@shoutem/ui": "^0.24.1",
     "apisauce": "^1.0.2",
     "immer": "^2.0.0",
     "immutable": "^4.0.0-rc.12",
