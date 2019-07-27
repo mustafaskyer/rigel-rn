@@ -3,7 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import createSagaMiddleware from "redux-saga";
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
-import saga from "./redux/sgags/index";
+import saga from "./redux/sagas/index";
 import rootReducer from "./redux/reducers/index";
 import immutableTransform from 'redux-persist-transform-immutable'
 
