@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "@react-native-community/async-storage": "^1.6.1",
     "apisauce": "^1.0.2",
     "immer": "^2.0.0",
     "immutable": "^4.0.0-rc.12",
@@ -32,6 +33,7 @@
     "react-native-linear-gradient": "^2.5.4",
     "react-native-material-bottom-navigation": "^1.0.2",
     "react-native-paper": "^2.2.4",
+    "react-native-permissions": "^1.2.0",
     "react-native-reanimated": "^1.1.0",
     "react-native-vector-icons": "^6.0.2",
     "react-navigation": "^3.7.0",
