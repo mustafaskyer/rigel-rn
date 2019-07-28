@@ -12,3 +12,8 @@ export const RESET_NOTIFY = 'RESET_NOTIFY';
 export const LOAD_USERS_IMAGES = 'LOAD_USERS_IMAGES';
 export const SUCCESS_LOADED_USERS = 'SUCCESS_LOADED_USERS';
 export const FAILED_LOADED_USERS = 'FAILED_LOADED_USERS';
+
+/***
+ * AppState Reducer Cases
+ */
+export const APP_STATE_STATUS = 'APP_STATE_STATUS';
