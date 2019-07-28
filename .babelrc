@@ -12,6 +12,7 @@
         "langs": "./App/langs/index",
         "redux-actions": "./App/redux/actions",
         "redux-reducer": "./App/redux/reducers",
+        "redux-types": "./App/redux/REDUX_TYPES",
         "configs": "./App/configs",
         "api": "./App/redux/apis/",
         "util":"./App/util",
