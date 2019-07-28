@@ -10,7 +10,7 @@ import { appStateAction } from "redux-actions";
 
 const Nav = props => {
   const currentAppState = useAppState();
-  const [position, stopObserving, setRNConfiguration] = useGeolocation();
+  const [position] = useGeolocation();
   const netInfo = useNetInfo();
 
   useEffect(() => {
