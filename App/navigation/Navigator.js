@@ -1,7 +1,30 @@
-import React from 'react'
-import { connect } from 'react-redux';
-import Navigator from './AppNavigation';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import Navigator from "./AppNavigation";
+import {
+  useAppState,
+  useGeolocation,
+  useNetInfo
+} from "react-native-hooks";
+import { appStateAction } from "redux-actions";
 
-const Nav = props =>  <Navigator {...props} />
-      
-export default connect(null)(Nav)
+const Nav = props => {
+  const currentAppState = useAppState();
+  const [position, stopObserving, setRNConfiguration] = useGeolocation();
+  const netInfo = useNetInfo();
+
+  useEffect(() => {
+    props.appStateAction({
+      appState: currentAppState,
+      netInfo,
+      position,
+    });
+  });
+
+  return <Navigator {...props} />;
+};
+
+export default connect(
+  null,
+  { appStateAction }
+)(Nav);
