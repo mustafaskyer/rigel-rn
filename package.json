@@ -1,15 +1,16 @@
 {
   "name": "SkyerStarter",
   "author": {
-    "name": "Mustafa Elsayed",
-    "email": "mustafaskir@gmail.com",
-    "url": "https://twitter.com/skirmustafa"
+    "name": "Mustafa",
+    "email": "mskyer@protonmail.com",
+    "url": "https://twitter.com/mustafaskyer"
   },
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "prepare": "patch-package",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "react-native start",
+    "lint": "eslint .",
     "test": "jest",
     "ix": "react-native run-ios --simulator='iPhone X'",
     "imx": "react-native run-ios --simulator='iPhone XS Max'",
