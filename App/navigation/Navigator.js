@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import { connect } from "react-redux";
 import Navigator from "./AppNavigation";
-import { useAppState, useNetInfo, useGeolocation } from "react-native-hooks";
+import { useAppState } from "react-native-hooks";
 import { ifIphoneX } from "react-native-iphone-x-helper";
 import { appStateAction } from "redux-actions";
 // import permissions from 'util/permissions';
@@ -10,17 +10,17 @@ import { appStateAction } from "redux-actions";
 // permissions.check('storage').then(r => console.log('@r', r))
 const Nav = props => {
   const currentAppState = useAppState();
-  const netInfo = useNetInfo();
-  const [position] = useGeolocation();
+  // const netInfo = useNetInfo();
+  // const [position] = useGeolocation();
 
-  useEffect(() => {
-    props.appStateAction({
-      appState: currentAppState,
-      netInfo,
-      position,
-      plaform: Platform.OS
-    });
-  });
+  // useEffect(() => {
+  //   props.appStateAction({
+  //     appState: currentAppState,
+  //     netInfo,
+  //     position,
+  //     plaform: Platform.OS
+  //   });
+  // });
 
   return (
     <View style={styles.view}>
