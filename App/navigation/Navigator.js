@@ -6,7 +6,6 @@ import { useAppState } from "react-native-hooks";
 import { ifIphoneX } from "react-native-iphone-x-helper";
 import { appStateAction } from "redux-actions";
 import NotificationsComponent from 'components/NotificationsComponent';
-import { addNotification } from 'redux-actions';
 // import permissions from 'util/permissions';
 
 // permissions.check('storage').then(r => console.log('@r', r))
@@ -18,9 +17,6 @@ const Nav = props => {
       appState: currentAppState,
       plaform: Platform.OS
     });
-    setTimeout(() => {
-      props.addNotification({ message: 'Welcome, Test Notification Bar' })
-    }, 1000)
     
   });
 
@@ -44,5 +40,5 @@ const styles = StyleSheet.create({
 
 export default connect(
   null,
-  { appStateAction, addNotification }
+  { appStateAction }
 )(Nav);
