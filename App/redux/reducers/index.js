@@ -1,12 +1,14 @@
 import { combineReducers } from "redux";
 
-import badges from './Badges';
-import users from './UsersReducer';
+import badges from "./Badges";
+import users from "./UsersReducer";
 // don't remove this line #imp
-	import AppStateReducer from './AppStateReducer'
+import notifications from "./NotificationsReducer";
+import appState from "./AppStateReducer";
 const rootReducer = combineReducers({
-// don't remove this line #rrd
-	AppStateReducer,
+  // don't remove this line #rrd
+  notifications,
+  appState,
   badges,
   users
 });

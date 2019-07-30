@@ -17,3 +17,9 @@ export const FAILED_LOADED_USERS = 'FAILED_LOADED_USERS';
  * AppState Reducer Cases
  */
 export const APP_STATE_STATUS = 'APP_STATE_STATUS';
+
+/***
+ * Notification Action Cases
+ */
+export const ADD_NOTIFICATION = 'ADD_NOTIFICATION';
+export const CLEAR_NOTFICATIONS = 'CLEAR_NOTFICATIONS';
