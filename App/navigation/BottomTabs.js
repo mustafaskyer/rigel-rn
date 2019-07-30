@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     opacity: 1,
     zIndex: 999,
-    paddingBottom: 19,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
