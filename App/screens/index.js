@@ -16,5 +16,6 @@ const all = {
   ...auth,
   ...reistered,
   // don't remove this line #scr
+	HomeScreen,
 }
 module.exports = { auth, reistered, all };
