@@ -20,6 +20,7 @@
     "@babel/runtime": "^7.1.5",
     "@react-native-community/async-storage": "^1.6.1",
     "apisauce": "^1.0.2",
+    "flubber": "^0.4.2",
     "immer": "^2.0.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.11",
