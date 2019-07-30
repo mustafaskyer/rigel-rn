@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     ...ifIphoneX({
       paddingTop: 44,
-      paddingBottom: 34
+      paddingBottom: 19
     })
   }
 });
