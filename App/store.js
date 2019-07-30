@@ -13,6 +13,7 @@ const persistConfig = {
   storage: storage,
   stateReconciler: autoMergeLevel2,
   transforms: [immutableTransform()],
+  blacklist: ['notifications']
 };
 
 const persistReducerr = persistReducer(persistConfig, rootReducer);
