@@ -28,6 +28,7 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* SkyerStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SkyerStarterTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		6F23D59FA1C54F84311AC7B9 /* libPods-SkyerStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10621E538619D737674C3330 /* libPods-SkyerStarter.a */; };
 		F3426A0E601574DB800A119C /* libPods-SkyerStarter-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1088F359F215628BF06333E /* libPods-SkyerStarter-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -395,6 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F23D59FA1C54F84311AC7B9 /* libPods-SkyerStarter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
