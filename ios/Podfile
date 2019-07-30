@@ -29,6 +29,8 @@ pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Foll
 
 pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+pod 'RNSound', :path => '../node_modules/react-native-sound'
+
 target 'SkyerStarterTests' do
   inherit! :search_paths
   # Pods for testing

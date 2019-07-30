@@ -26,7 +26,6 @@ function NotificationsComponent(props) {
     extrapolate: Extrapolate.CLAMP
   });
   useEffect(() => {
-    console.log("@props", props);
     if (props.notifications.payload) {
       setTrans(runTiming(new Clock(rotate), -300, 0, 750));
       setRotate(runTiming(new Clock(), 0, 1, 1750));
@@ -69,7 +68,7 @@ function NotificationsComponent(props) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 40,
+    // height: 40,
     backgroundColor: "green"
   },
   bar: {

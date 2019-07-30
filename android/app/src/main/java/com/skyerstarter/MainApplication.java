@@ -7,6 +7,7 @@ import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
+import com.zmxv.RNSound.RNSoundPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -44,6 +45,7 @@ public class MainApplication extends Application implements ReactApplication {
 
       // return Arrays.<ReactPackage>asList(
       //     new MainReactPackage(),
+            new RNSoundPackage(),
       //       new AsyncStoragePackage(),
       //       new LinearGradientPackage(),
       //       new RNGestureHandlerPackage(),

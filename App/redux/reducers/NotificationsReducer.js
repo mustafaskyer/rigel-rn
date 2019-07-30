@@ -8,7 +8,6 @@ const INIT = {
    */
 };
 export default (state = INIT, action) => {
-  console.log('@action', action)
   switch (action.type) {
     case ADD_NOTIFICATION: {
       return { payload: action.payload };
