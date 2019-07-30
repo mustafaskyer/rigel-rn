@@ -5,25 +5,28 @@ import Navigator from "./AppNavigation";
 import { useAppState } from "react-native-hooks";
 import { ifIphoneX } from "react-native-iphone-x-helper";
 import { appStateAction } from "redux-actions";
+import NotificationsComponent from 'components/NotificationsComponent';
+import { addNotification } from 'redux-actions';
 // import permissions from 'util/permissions';
 
 // permissions.check('storage').then(r => console.log('@r', r))
 const Nav = props => {
   const currentAppState = useAppState();
-  // const netInfo = useNetInfo();
-  // const [position] = useGeolocation();
 
-  // useEffect(() => {
-  //   props.appStateAction({
-  //     appState: currentAppState,
-  //     netInfo,
-  //     position,
-  //     plaform: Platform.OS
-  //   });
-  // });
+  useEffect(() => {
+    props.appStateAction({
+      appState: currentAppState,
+      plaform: Platform.OS
+    });
+    setTimeout(() => {
+      props.addNotification({ message: 'Welcome, Test Notification Bar' })
+    }, 1000)
+    
+  });
 
   return (
     <View style={styles.view}>
+      <NotificationsComponent />
       <Navigator {...props} />
     </View>
   );
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
   view: {
     flex: 1,
     ...ifIphoneX({
-      paddingTop: 44,
+      paddingTop: 35,
       paddingBottom: 19
     })
   }
@@ -41,5 +44,5 @@ const styles = StyleSheet.create({
 
 export default connect(
   null,
-  { appStateAction }
+  { appStateAction, addNotification }
 )(Nav);
