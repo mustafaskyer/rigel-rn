@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Platform } from "react-native";
 import { connect } from 'react-redux';
 
 const BottomTabs = () => {
@@ -23,15 +23,15 @@ export default connect(mapProps)(BottomTabs)
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
+    height: Platform.OS === 'android' ? 60 : 70,
     // borderRadius: 23,
     backgroundColor: "red",
     opacity: 1,
     zIndex: 999,
-    paddingBottom: 19,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
+    paddingBottom: Platform.OS === 'android' ? 0 : 19
   },
   tabText: {
     color: '#FFF',

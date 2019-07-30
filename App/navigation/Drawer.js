@@ -14,7 +14,7 @@ import styles from './DrawerStyles';
 const Drawer = props => {
     renderDrawer = () => null;
     return (
-        <View style={{ flex:1 }}>
+        <View style={{ flex:1, zIndex: 99999, backgroundColor: 'red' }}>
             <DrawerLayout
           ref={drawer => {
             this.drawer = drawer;
@@ -28,7 +28,7 @@ const Drawer = props => {
                   ios: styles.contentContainerStyleIos, 
                   android: styles.contentContainerStyleAndroid
                 })}>
-          <View style={{ flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFF' }}>
+          <View style={{ flex:1, height: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', zIndex: 9999 }}>
               <TouchableOpacity onPress={() => props.navigation.closeDrawer()}>
                 <Text style={styles.text}> later ✋ </Text>
               </TouchableOpacity>
