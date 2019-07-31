@@ -137,6 +137,9 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_cameraroll')
+    implementation project(':@react-native-community_netinfo')
+    implementation project(':@react-native-community_geolocation')
     implementation project(':@react-native-mapbox-gl_maps')
     implementation project(':react-native-sound')
     implementation project(':@react-native-community_async-storage')
