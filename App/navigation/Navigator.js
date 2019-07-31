@@ -19,7 +19,7 @@ const Nav = props => {
       plaform: Platform.OS
     });
     setTimeout(() => {
-      props.addNotification({ message: 'Welcome there , it works ' })
+      // props.addNotification({ message: 'Welcome there , it works ' })
     }, 1000)
     
   });
