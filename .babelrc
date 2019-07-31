@@ -16,7 +16,8 @@
         "configs": "./App/configs",
         "api": "./App/redux/apis/",
         "util":"./App/util",
-        "config": "./app.config.js"
+        "config": "./app.config.js",
+        "modules": "./App/modules"
       },
       "extensions": [".js"]
     }]
