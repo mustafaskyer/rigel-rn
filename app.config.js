@@ -1,5 +1,5 @@
 /** control navigation should have tabs or not */
-const hasTabs = true;
+const hasTabs = false;
 /** control navigation should have drawer or not */
 const hasDrawer = true;
 /** set default app lang */
