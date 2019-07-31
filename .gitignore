@@ -56,3 +56,4 @@ buck-out/
 *.jsbundle
 /ios/Pods
 package-lock.json
+/App/modules
