@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
-import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
 import com.mapbox.rctmgl.RCTMGLPackage;
 import com.zmxv.RNSound.RNSoundPackage;
@@ -35,7 +34,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new CameraRollPackage(),
-            new NetInfoPackage(),
             new GeolocationPackage(),
             new RCTMGLPackage(),
             new RNSoundPackage(),
