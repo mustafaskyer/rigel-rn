@@ -10,6 +10,7 @@ const { interpolate, Clock, Extrapolate, concat } = Animated;
 function NotificationsComponent(props) {
   const [trans, setTrans] = useState(-300);
   const [rotate, setRotate] = useState(-300);
+  const {message,type} = props.notifications.payload && props.notifications.payload || {}
   const scaleY = interpolate(trans, {
     inputRange: [-300, -50, 0],
     outputRange: [0, 0, 1],
@@ -30,13 +31,13 @@ function NotificationsComponent(props) {
       setTrans(runTiming(new Clock(rotate), -300, 0, 750));
       setRotate(runTiming(new Clock(), 0, 1, 1750));
       setTimeout(() => {
-        setTrans(runTiming(new Clock(), 0, -300, 750));
-      }, 1050000);
+        setTrans(runTiming(new Clock(), 0, -300, 0));
+      }, 4000);
     }
   }, [props.notifications.payload]);
   return (
     <Animated.View
-      style={[styles.container, { top: trans, transform: [{ scaleY }] }]}
+      style={[styles.container, { top: trans, transform: [{ scaleY }], backgroundColor: type === 'info' ? 'green' : 'red' }]}
     >
       <TouchableWithoutFeedback
         onPress={() => setTrans(runTiming(new Clock(), 0, -300, 750))}
@@ -55,7 +56,7 @@ function NotificationsComponent(props) {
               <Animated.Text
                 style={[styles.barText, { opacity: textFadeInterpolate }]}
               >
-                {props.notifications.payload.message}
+                {message}
               </Animated.Text>
             )}
           </View>
