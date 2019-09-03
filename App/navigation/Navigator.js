@@ -19,12 +19,9 @@ const Nav = props => {
       appState: currentAppState,
       plaform: Platform.OS
     });
-    if(netState){
-      props.addNotification({ message: 'connection works', type: 'info' })
-    }else{
-      props.addNotification({ message: 'offline!!', type: 'error' })
-    }
-    
+    // if(!netState){
+    //   props.addNotification({ message: 'offline!!', type: 'error' })
+    // }
   });
 
   return (
