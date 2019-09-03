@@ -10,7 +10,6 @@ function HomeScreen(props) {
   });
   return (
     <View style={styles.container}>
-      {/* <MapBoxGl coords={[46.71473915, 24.75040361]} /> */}
       <Text>{'HomeScreen'}</Text>
     </View>
   );
