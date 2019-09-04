@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import Navigator from "./AppNavigation";
 import { useAppState } from "react-native-hooks";
 import { ifIphoneX } from "react-native-iphone-x-helper";
+
+
 import { appStateAction } from "redux-actions";
 import NotificationsComponent from 'components/NotificationsComponent';
 import { addNotification } from 'redux-actions';

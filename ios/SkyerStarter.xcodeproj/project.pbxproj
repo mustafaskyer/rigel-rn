@@ -49,6 +49,8 @@
 		4424107222F0FD6A00661BAA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424107122F0FD6A00661BAA /* Mapbox.framework */; };
 		4424107322F0FD6A00661BAA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4424107122F0FD6A00661BAA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4424107A22F0FD9F00661BAA /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424107922F0FD8F00661BAA /* libRCTMGL.a */; };
+		443ABD2D231EA2D8001A67DC /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443ABCF7231EA2CA001A67DC /* libCodePush.a */; };
+		443ABD2F231EA2DF001A67DC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 443ABD2E231EA2DF001A67DC /* libz.tbd */; };
 		448EDBAD231E51BB000E11FF /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 448EDBAC231E51BB000E11FF /* NotificationService.m */; };
 		448EDBB1231E51BB000E11FF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 448EDBA9231E51BB000E11FF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		448EDBB7231E5219000E11FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448EDBB6231E5219000E11FF /* UIKit.framework */; };
@@ -409,6 +411,20 @@
 			remoteGlobalIDString = C4D1443D1F4E16F600396F26;
 			remoteInfo = RCTMGL;
 		};
+		443ABCF6231EA2CA001A67DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443ABCEF231EA2CA001A67DC /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
+		443ABCF8231EA2CA001A67DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443ABCEF231EA2CA001A67DC /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F886647B1F4ADB500036D01B;
+			remoteInfo = "CodePush-tvOS";
+		};
 		4469F67722E29A51009FD4A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8F1438604D34AC0B2A4D3D0 /* BVLinearGradient.xcodeproj */;
@@ -539,6 +555,8 @@
 		44082D8B2276ABB800359F06 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4424107122F0FD6A00661BAA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/@react-native-mapbox-gl/maps/ios/Mapbox.framework"; sourceTree = "<group>"; };
 		4424107422F0FD8F00661BAA /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTMGL.xcodeproj; path = "../node_modules/@react-native-mapbox-gl/maps/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; };
+		443ABCEF231EA2CA001A67DC /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
+		443ABD2E231EA2DF001A67DC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		448EDBA4231E5176000E11FF /* SkyerStarter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SkyerStarter.entitlements; path = SkyerStarter/SkyerStarter.entitlements; sourceTree = "<group>"; };
 		448EDBA9231E51BB000E11FF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		448EDBAB231E51BB000E11FF /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
@@ -592,6 +610,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443ABD2F231EA2DF001A67DC /* libz.tbd in Frameworks */,
+				443ABD2D231EA2D8001A67DC /* libCodePush.a in Frameworks */,
 				4424107A22F0FD9F00661BAA /* libRCTMGL.a in Frameworks */,
 				44082E152276AD6700359F06 /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -780,6 +800,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				443ABD2E231EA2DF001A67DC /* libz.tbd */,
 				448EDBB8231E5222000E11FF /* SystemConfiguration.framework */,
 				448EDBB6231E5219000E11FF /* UIKit.framework */,
 				44082D8B2276ABB800359F06 /* JavaScriptCore.framework */,
@@ -864,6 +885,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		443ABCF0231EA2CA001A67DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				443ABCF7231EA2CA001A67DC /* libCodePush.a */,
+				443ABCF9231EA2CA001A67DC /* libCodePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4469F67322E29A51009FD4A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -934,6 +964,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				443ABCEF231EA2CA001A67DC /* CodePush.xcodeproj */,
 				4424107422F0FD8F00661BAA /* RCTMGL.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -1193,6 +1224,10 @@
 				{
 					ProductGroup = 4469F67322E29A51009FD4A6 /* Products */;
 					ProjectRef = F8F1438604D34AC0B2A4D3D0 /* BVLinearGradient.xcodeproj */;
+				},
+				{
+					ProductGroup = 443ABCF0231EA2CA001A67DC /* Products */;
+					ProjectRef = 443ABCEF231EA2CA001A67DC /* CodePush.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1608,6 +1643,20 @@
 			fileType = archive.ar;
 			path = libRCTMGL.a;
 			remoteRef = 4424107822F0FD8F00661BAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		443ABCF7231EA2CA001A67DC /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 443ABCF6231EA2CA001A67DC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		443ABCF9231EA2CA001A67DC /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 443ABCF8231EA2CA001A67DC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4469F67822E29A51009FD4A6 /* libBVLinearGradient.a */ = {

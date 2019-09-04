@@ -4,6 +4,10 @@ import EStyleSheet from "react-native-extended-stylesheet";
  * OneSignal
  */
 import OneSignal from "react-native-onesignal";
+/**
+ * Codepush
+ */
+import codePush from 'react-native-code-push';
 
 //@colors&fonts
 import colors from "./assets/styles/colors";
@@ -21,7 +25,7 @@ import i18n from "react-native-i18n";
 import Navigator from "./navigation/Navigator";
 /** Disabled console warnings */
 console.disableYellowBox = true;
-export default class App extends Component {
+class App extends Component {
   constructor() {
     super();
     i18n.locale = "tr"; // manually set language
@@ -66,3 +70,11 @@ export default class App extends Component {
     );
   }
 }
+
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_START, 
+}
+
+export default codePush(codePushOptions)(App)
+
+

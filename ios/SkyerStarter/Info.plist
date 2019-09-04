@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CodePushDeploymentKey</key>
+	<string>FHj4Lx2SyglXmMNejcddQOhPYs8tTdAfJMg5PG</string>
 	<key>CFBundleDisplayName</key>
 	<string>SkyerStarter</string>
 	<key>CFBundleExecutable</key>
