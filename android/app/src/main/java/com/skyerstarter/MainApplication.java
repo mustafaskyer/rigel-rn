@@ -3,6 +3,10 @@ package com.skyerstarter;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
+import com.horcrux.svg.SvgPackage;
+import com.avishayil.rnrestart.ReactNativeRestartPackage;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
@@ -40,6 +44,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new PickerPackage(),
+            new SvgPackage(),
+            new ReactNativeRestartPackage(),
+            new NetInfoPackage(),
             new ReactNativeOneSignalPackage(),
             new CameraRollPackage(),
             new GeolocationPackage(),

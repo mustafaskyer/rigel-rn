@@ -112,6 +112,7 @@ android {
         applicationId "com.skyerstarter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        vectorDrawables.useSupportLibrary = true
         versionCode 1
         versionName "1.0"
         ndk {
@@ -148,6 +149,10 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-image-crop-picker')
+    implementation project(':react-native-svg')
+    implementation project(':react-native-restart')
+    implementation project(':@react-native-community_netinfo')
     compile project(':react-native-code-push')
     implementation project(':react-native-onesignal')
     implementation project(':@react-native-community_cameraroll')
