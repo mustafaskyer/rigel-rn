@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SkyerStarter</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">deployment-key-here</string>
 </resources>
