@@ -47,7 +47,7 @@
 		00E356F21AD99517003FC87E /* SkyerStarterRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyerStarterRNTests.m; sourceTree = "<group>"; };
 		0B18DEF5EE36E0354FABA470 /* Pods-SkyerStarterRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRNTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRNTests/Pods-SkyerStarterRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		10922C28259B89CCCD42D47A /* libPods-SkyerStarterRN-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRN-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* Makan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Rigel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rigel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SkyerStarterRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SkyerStarterRN/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -178,7 +178,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -208,7 +207,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Makan.app */,
+				13B07F961A680F5B00A75B9A /* Rigel.app */,
 				44157C55234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
@@ -238,7 +237,7 @@
 			);
 			name = SkyerStarterRN;
 			productName = SkyerStarterRN;
-			productReference = 13B07F961A680F5B00A75B9A /* Makan.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Rigel.app */;
 			productType = "com.apple.product-type.application";
 		};
 		44157C54234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */ = {
@@ -528,7 +527,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new;
-				PRODUCT_NAME = Makan;
+				PRODUCT_NAME = Rigel;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -550,7 +549,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new;
-				PRODUCT_NAME = Makan;
+				PRODUCT_NAME = Rigel;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

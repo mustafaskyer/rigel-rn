@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { Animated } from 'react-native';
+import React, {useEffect, useRef} from 'react';
+import {Animated} from 'react-native';
 
-const useAnimatedValue = ()=> {
-    const ref = useRef(new Animated.Value(1))
-    return ref.current
-  }
+const useAnimatedValue = () => {
+  const ref = useRef(new Animated.Value(1));
+  return ref.current;
+};
 
 const useAnimation = () => {
   const animatedValue = useAnimatedValue();
@@ -12,7 +12,7 @@ const useAnimation = () => {
     Animated.timing(animatedValue, {
       toValue: 2.5,
       duration: 5000,
-      useNativeDriver: true
+      useNativeDriver: true,
     }).start();
   };
 
