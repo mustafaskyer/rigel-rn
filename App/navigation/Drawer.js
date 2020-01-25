@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import styles from './DrawerStyles';
 
 const Drawer = props => {
-  const renderDrawer = () => null;
   return (
     <View style={styles.container}>
       <DrawerLayout
@@ -25,7 +24,7 @@ const Drawer = props => {
         })}>
         <View style={styles.layout}>
           <TouchableOpacity onPress={() => props.navigation.closeDrawer()}>
-            <Text style={styles.text}> later ✋ </Text>
+            <Text style={styles.text}>close</Text>
           </TouchableOpacity>
         </View>
       </DrawerLayout>
