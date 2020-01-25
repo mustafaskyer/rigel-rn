@@ -1,4 +1,4 @@
-import Permissions from "react-native-permissions";
+import Permissions from 'react-native-permissions';
 /**
  * Supported permissions types
                     Type                            IOS     Android
@@ -25,18 +25,18 @@ import Permissions from "react-native-permissions";
 const permissionsModule = (function() {
   async function request(name, title, message, type) {
     const res = await Permissions.request(name, {
-      rationale: { title, message },
+      rationale: {title, message},
       type: type,
-    //   type // incase location accept [always or whenInUse] 
-    //   type // incase notification accept [alert, badge, sound] 
+      //   type // incase location accept [always or whenInUse]
+      //   type // incase notification accept [alert, badge, sound]
     });
     return res;
   }
   async function check(name, type) {
     const res = await Permissions.request(name, {
-        type,
-        //   type // incase location accept [always or whenInUse] 
-        //   type // incase notification accept [alert, badge, sound] 
+      type,
+      //   type // incase location accept [always or whenInUse]
+      //   type // incase notification accept [alert, badge, sound]
     });
     return res;
   }
@@ -63,7 +63,7 @@ const permissionsModule = (function() {
     checkMultiple,
     openSettings,
     getTypes,
-    canOpenSettings
+    canOpenSettings,
   };
 })();
 
