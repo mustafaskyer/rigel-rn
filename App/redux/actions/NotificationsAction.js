@@ -1,4 +1,4 @@
-import { ADD_NOTIFICATION, CLEAR_NOTFICATIONS } from "redux-types";
+import {ADD_NOTIFICATION, CLEAR_NOTFICATIONS} from 'redux-types';
 
 /**
  * @param {any} payload
@@ -7,7 +7,7 @@ import { ADD_NOTIFICATION, CLEAR_NOTFICATIONS } from "redux-types";
 export const addNotification = payload => {
   return {
     type: ADD_NOTIFICATION,
-    payload
+    payload,
   };
 };
 
@@ -17,6 +17,6 @@ export const addNotification = payload => {
  */
 export const clearNotifications = () => {
   return {
-    type: CLEAR_NOTFICATIONS
+    type: CLEAR_NOTFICATIONS,
   };
 };

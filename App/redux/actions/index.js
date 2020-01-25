@@ -1,7 +1,6 @@
-export { appStateAction } from "./AppStateAction";
-export { addNotification, clearNotifications } from "./NotificationsAction";
-// don't remove this line #imp
+export {appStateAction} from './AppStateAction';
+export {addNotification, clearNotifications} from './NotificationsAction';
 
 export const action = (type, payload) => {
-    return { type, payload }
-}
+  return {type, payload};
+};
