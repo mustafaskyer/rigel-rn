@@ -1,5 +1,7 @@
-import {APP_STATE_STATUS} from 'redux-types';
-import {takeLatest, put} from 'redux-saga/effects';
+import {
+  APP_STATE_STATUS
+} from 'redux-types';
+import {takeLatest,put} from 'redux-saga/effects';
 import api from 'api';
 //api
 function* loadAppStateApi(payload) {

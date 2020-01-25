@@ -10,6 +10,7 @@ export default (state = INIT, action) => {
       return {
         appState: action.payload.appState,
       };
+      break;
     }
     default:
       return state;
