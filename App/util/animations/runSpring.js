@@ -1,4 +1,4 @@
-import Animated, { Easing } from 'react-native-reanimated';
+import Animated, {Easing} from 'react-native-reanimated';
 const {
   set,
   cond,

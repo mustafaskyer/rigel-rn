@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Geolocation from "@react-native-community/geolocation";
+import React, {useState, useEffect} from 'react';
+import Geolocation from '@react-native-community/geolocation';
 
 const initial = {
   timeStamp: null,
@@ -10,8 +10,8 @@ const initial = {
     heading: null,
     latitude: null,
     longitude: null,
-    speed: null
-  }
+    speed: null,
+  },
 };
 export default function geo(positionOptions) {
   const [position, setPosition] = useState(initial);
@@ -19,21 +19,20 @@ export default function geo(positionOptions) {
     Geolocation.getCurrentPosition(success, failure);
   }, []);
   useEffect(() => {
-
     const listener = Geolocation.watchPosition(
       success,
       failure,
-      positionOptions
+      positionOptions,
     );
 
     return () => Geolocation.clearWatch(listener);
-  }, []);
+  }, [positionOptions]);
   function success(data) {
     setPosition(data);
   }
 
   function failure(err) {
-    console.log("error setting coordinates: ", err);
+    console.log('error setting coordinates: ', err);
   }
   function setRNConfiguration(config) {
     Geolocation.setRNConfiguration(config);
