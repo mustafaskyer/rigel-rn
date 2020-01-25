@@ -1,50 +1,48 @@
 import React from 'react';
-import {
-  Platform,
-  Text,
-  View,
-  TouchableOpacity
-} from 'react-native';
+import {Platform, Text, View, TouchableOpacity} from 'react-native';
 import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 // styles
 import styles from './DrawerStyles';
 
 const Drawer = props => {
-    renderDrawer = () => null;
-    return (
-        <View style={{ flex:1, zIndex: 99999, backgroundColor: 'red' }}>
-            <DrawerLayout
-          ref={drawer => {
-            this.drawer = drawer;
-          }}
-          drawerWidth={300}
-          keyboardDismissMode="on-drag"
-          drawerType={'front'}
-          useNativeAnimations={true}
-          renderNavigationView={this.renderDrawer}
-          contentContainerStyle={Platform.select({ 
-                  ios: styles.contentContainerStyleIos, 
-                  android: styles.contentContainerStyleAndroid
-                })}>
-          <View style={{ flex:1, height: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', zIndex: 9999 }}>
-              <TouchableOpacity onPress={() => props.navigation.closeDrawer()}>
-                <Text style={styles.text}> later ✋ </Text>
-              </TouchableOpacity>
-          </View>
-        </DrawerLayout>
+  const renderDrawer = () => null;
+  return (
+    <View style={styles.container}>
+      <DrawerLayout
+        ref={drawer => {
+          this.drawer = drawer;
+        }}
+        drawerWidth={300}
+        keyboardDismissMode="on-drag"
+        drawerType={'front'}
+        useNativeAnimations={true}
+        renderNavigationView={renderDrawer()}
+        contentContainerStyle={Platform.select({
+          ios: styles.contentContainerStyleIos,
+          android: styles.contentContainerStyleAndroid,
+        })}>
+        <View style={styles.layout}>
+          <TouchableOpacity onPress={() => props.navigation.closeDrawer()}>
+            <Text style={styles.text}> later ✋ </Text>
+          </TouchableOpacity>
         </View>
-    );
-}
+      </DrawerLayout>
+    </View>
+  );
+};
 
 const mapProps = state => {
-    return {
-        badges: state.badges,
-        // ... other reducers to connect with drawer ❤️
-    }
-}
+  return {
+    badges: state.badges,
+    // ... other reducers to connect with drawer ❤️
+  };
+};
 
 // conect reduces with component,
 // replace null with action, in case handle redux actions
-export default connect(mapProps, null)(Drawer)
+export default connect(
+  mapProps,
+  null,
+)(Drawer);
