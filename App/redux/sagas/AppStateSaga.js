@@ -1,7 +1,5 @@
-import {
-  APP_STATE_STATUS
-} from "redux-types";
-import { takeLatest, put } from "redux-saga/effects";
+import {APP_STATE_STATUS} from 'redux-types';
+import {takeLatest, put} from 'redux-saga/effects';
 import api from 'api';
 //api
 function* loadAppStateApi(payload) {
@@ -14,15 +12,12 @@ function* loadAppStateApi(payload) {
 function* handleWatchAppState({payload}) {
   try {
     const result = yield loadAppStateApi(payload);
-    // yield put({ type: "SUCCESS", payload: result });
+    yield put({type: 'SUCCESS', payload: result});
   } catch (err) {
-    // yield put({ type: "FAILED", payload: err });
+    yield put({type: 'FAILED', payload: err});
   }
 }
 
 export default function* watchAppState() {
-  yield takeLatest(
-    APP_STATE_STATUS,
-    handleWatchAppState
-  );
+  yield takeLatest(APP_STATE_STATUS, handleWatchAppState);
 }
