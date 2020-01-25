@@ -1,19 +1,16 @@
-import React from "react";
-import { View, Text, StyleSheet, Modal } from "react-native";
+import React from 'react';
+import {View, Text, StyleSheet, Modal} from 'react-native';
 // import Modal from 'react-native-modal';
 
 function ModalComponent(props) {
   return (
-      <Modal
-        {...props}
-        animationType="slide"
-        transparent={true}
-        visible={props.isVisible}
-      >
-        <View style={[styles.container, props.style]}>
-        {props.children}
-        </View>
-      </Modal>
+    <Modal
+      {...props}
+      animationType="slide"
+      transparent={true}
+      visible={props.isVisible}>
+      <View style={[styles.container, props.style]}>{props.children}</View>
+    </Modal>
   );
 }
 
@@ -26,7 +23,7 @@ const styles = StyleSheet.create({
     // padding: 0,
     // backgroundColor: "red",
     // borderWidth: 11
-  }
+  },
 });
 
 export default ModalComponent;

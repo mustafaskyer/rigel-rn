@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
@@ -9,28 +9,28 @@ import {
   Alert,
   FlatList,
   Image,
-  ActivityIndicator
-} from "react-native";
-import { useImmer } from "use-immer";
-import AntIcons from "react-native-vector-icons/AntDesign";
-import DatePicker from "react-native-datepicker";
-import moment from "moment";
-import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
-import _ from "lodash";
-import { connect } from 'react-redux';
+  ActivityIndicator,
+} from 'react-native';
+import {useImmer} from 'use-immer';
+import AntIcons from 'react-native-vector-icons/AntDesign';
+import DatePicker from 'react-native-datepicker';
+import moment from 'moment';
+import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
+import _ from 'lodash';
+import {connect} from 'react-redux';
 
-import Modal from "./ModalComponent";
-import Row from "./RowComponent";
-import Spacer from "./SpacerComponent";
-import DateItem from "./DateItemComponent";
-const { height } = Dimensions.get("window");
-import langs from "langs";
-import api from "api";
-import { addNotification } from 'redux-actions';
+import Modal from './ModalComponent';
+import Row from './RowComponent';
+import Spacer from './SpacerComponent';
+import DateItem from './DateItemComponent';
+const {height} = Dimensions.get('window');
+import langs from 'langs';
+import api from 'api';
+import {addNotification} from 'redux-actions';
 
 function WorkTimesOption(props) {
   // console.log('@props', props.activeShifts)
-  const { id } = props;
+  const {id} = props;
   const index = _.findIndex(props.activeShifts, _id => _id === id);
   const isSelected = index !== -1;
 
@@ -41,25 +41,24 @@ function WorkTimesOption(props) {
         <View
           style={[
             styles.oView,
-            { backgroundColor: isSelected ? "#BF4C58" : "#FFF" }
-          ]}
-        >
-          <FontAwesomeIcons name={"check"} size={10} color={"#FFF"} />
+            {backgroundColor: isSelected ? '#BF4C58' : '#FFF'},
+          ]}>
+          <FontAwesomeIcons name={'check'} size={10} color={'#FFF'} />
         </View>
         <Spacer width={9} />
-        <Text style={styles.fromTxt}>{langs("modal_status.from")}</Text>
+        <Text style={styles.fromTxt}>{langs('modal_status.from')}</Text>
         <Spacer width={25} />
         <Text style={styles.numTxt}>{props.time_start}</Text>
         <Spacer width={25} />
-        <Text style={styles.fromTxt}>{langs("modal_status.am")}</Text>
+        <Text style={styles.fromTxt}>{langs('modal_status.am')}</Text>
         <Spacer width={12} />
         <View style={styles.optionSep} />
         <Spacer width={14} />
-        <Text style={styles.fromTxt}>{langs("modal_status.to")}</Text>
+        <Text style={styles.fromTxt}>{langs('modal_status.to')}</Text>
         <Spacer width={37} />
         <Text>{props.time_end}</Text>
         <Spacer width={37} />
-        <Text style={styles.fromTxt}>{langs("modal_status.pm")}</Text>
+        <Text style={styles.fromTxt}>{langs('modal_status.pm')}</Text>
         <Spacer width={13} />
       </Row>
     </TouchableWithoutFeedback>
@@ -77,22 +76,22 @@ function ModalStatusComponent(props) {
   const [errorIn, setErrorIn] = useImmer(null);
   const [loading, setLoading] = useImmer(null);
 
-  const {user} = props.user
+  const {user} = props.user;
   useEffect(() => {
-    if(!api.headers.Authorization){
-      api.setHeader('Authorization', `Bearer ${user.token}`)
+    if (!api.headers.Authorization) {
+      api.setHeader('Authorization', `Bearer ${user.token}`);
     }
-    api.get("trip-shift").then(res => {
+    api.get('trip-shift').then(res => {
       if (_handleRes(res)) {
         setShifts(state => (state = res.data.data));
       }
     });
-    api.get("trip-feature").then(res => {
+    api.get('trip-feature').then(res => {
       if (_handleRes(res)) {
         setFeatures(state => (state = res.data.data));
       }
     });
-  }, []);
+  }, [setFeatures, setShifts, user.token]);
   _handleRes = res => {
     if (res.ok) {
       if (res.data.success) {
@@ -124,14 +123,14 @@ function ModalStatusComponent(props) {
     }
   };
 
-  handleAddShift = async() => {
-    if(date && !activeDate){
-      setErrorIn(state => state = 'date')
-      return
+  handleAddShift = async () => {
+    if (date && !activeDate) {
+      setErrorIn(state => (state = 'date'));
+      return;
     }
-    if(_.isEmpty(activeShifts)){
-      setErrorIn(state => state = 'activeShifts')
-      return
+    if (_.isEmpty(activeShifts)) {
+      setErrorIn(state => (state = 'activeShifts'));
+      return;
     }
     const body = {
       the_date: moment(date).format('YYYY-MM-DD'),
@@ -139,75 +138,77 @@ function ModalStatusComponent(props) {
       hour_available: perHour,
       trip_feature_ids: activeFeatures,
       storing_confirmed: false,
-    }
-    setLoading(state => state = true)
-    const res = await api.post('driver-shift',body)
-    setLoading(state => state = false)
-    console.log('@res', res)
-    if(res.ok){
-      if(res.data.success){
-        // 
-        setDate(state => state = null)
-        setActiveDate(state => state = null)
-        setActiveShifts(state => state = [])
-        setActiveFeatures(state => state = [])
-        setPerHour(state => state = false)
-        props.closeAndNavToSech()
-      }else {
+    };
+    setLoading(state => (state = true));
+    const res = await api.post('driver-shift', body);
+    setLoading(state => (state = false));
+    console.log('@res', res);
+    if (res.ok) {
+      if (res.data.success) {
+        //
+        setDate(state => (state = null));
+        setActiveDate(state => (state = null));
+        setActiveShifts(state => (state = []));
+        setActiveFeatures(state => (state = []));
+        setPerHour(state => (state = false));
+        props.closeAndNavToSech();
+      } else {
         // an err
-        props.close()
-        props.addNotification({ message: res.data.message, type: 'error' })
+        props.close();
+        props.addNotification({message: res.data.message, type: 'error'});
       }
-    }else {
+    } else {
       // an err
-      props.close()
-      props.addNotification({ message: res.data.message, type: 'error' })
+      props.close();
+      props.addNotification({message: res.data.message, type: 'error'});
     }
-  }
+  };
   return (
     <Modal {...props} style={styles.mainView}>
       <Spacer height={36} />
       <Row style={styles.topRow}>
         <Text style={styles.titleTxt}>
-          {langs("modal_status.add_avaliable_status")}
+          {langs('modal_status.add_avaliable_status')}
         </Text>
         <TouchableWithoutFeedback onPress={props.close}>
           <View style={styles.closeBtn}>
-            <AntIcons name={"closecircleo"} size={24} color={"#635B64"} />
+            <AntIcons name={'closecircleo'} size={24} color={'#635B64'} />
           </View>
         </TouchableWithoutFeedback>
       </Row>
       <Spacer height={34} />
-      <ScrollView style={{ flex: 1, maxWidth: "100%" }}>
+      <ScrollView style={{flex: 1, maxWidth: '100%'}}>
         <View style={styles.padding16}>
-          <Text style={[styles.smTitle, errorIn === 'date' && { color: 'red' }]}>
-            {langs("modal_status.select_date")}
+          <Text style={[styles.smTitle, errorIn === 'date' && {color: 'red'}]}>
+            {langs('modal_status.select_date')}
           </Text>
           <Spacer height={11} />
           <FlatList
-            style={{ maxHeight: 45 }}
+            style={{maxHeight: 45}}
             horizontal
             showsHorizontalScrollIndicator={false}
             data={[
               {
                 id: 1,
-                title: langs("modal_status.today"),
-                value: moment().format("YYYY-MM-DD")
+                title: langs('modal_status.today'),
+                value: moment().format('YYYY-MM-DD'),
               },
               {
                 id: 2,
-                title: langs("modal_status.tomorrow"),
+                title: langs('modal_status.tomorrow'),
                 value: moment()
-                  .add("day", 1)
-                  .format("YYYY-MM-DD")
-              }
+                  .add('day', 1)
+                  .format('YYYY-MM-DD'),
+              },
             ]}
-            renderItem={({ item }) => (
+            renderItem={({item}) => (
               <View style={styles.vBorder}>
                 <DateItem
                   active={activeDate === item.id}
                   onPress={() => {
-                    if(errorIn === 'date') setErrorIn(state => state = null)
+                    if (errorIn === 'date') {
+                      setErrorIn(state => (state = null));
+                    }
                     setActiveDate(state => (state = item.id));
                     setDate(state => (state = item.value));
                   }}
@@ -223,34 +224,33 @@ function ModalStatusComponent(props) {
                   <View
                     style={[
                       styles.clndr,
-                      activeDate === "calendar" && {
+                      activeDate === 'calendar' && {
                         borderWidth: 1,
-                        borderColor: "#BF4C58"
-                      }
-                    ]}
-                  >
+                        borderColor: '#BF4C58',
+                      },
+                    ]}>
                     <DatePicker
-                      style={{ width: 30 }}
+                      style={{width: 30}}
                       date={date}
                       mode="date"
                       placeholder="select date"
                       format="YYYY-MM-DD"
                       minDate={new Date()}
-                      confirmBtnText={langs("modal_status.confirm")}
-                      cancelBtnText={langs("modal_status.cancel")}
+                      confirmBtnText={langs('modal_status.confirm')}
+                      cancelBtnText={langs('modal_status.cancel')}
                       hideText
                       onDateChange={date => {
-                        setActiveDate(state => (state = "calendar"));
+                        setActiveDate(state => (state = 'calendar'));
                         setDate(state => (state = date));
                       }}
                       customStyles={{
                         dateIcon: {
-                          resizeMode: "contain",
+                          resizeMode: 'contain',
                           width: 21,
-                          height: 21
-                        }
+                          height: 21,
+                        },
                       }}
-                      iconSource={require("imgs/calendar.png")}
+                      iconSource={require('imgs/calendar.png')}
                     />
                   </View>
                 </TouchableWithoutFeedback>
@@ -260,17 +260,21 @@ function ModalStatusComponent(props) {
           <Spacer height={11} />
           {activeDate && (
             <Row>
-              <View style={[styles.oView, { backgroundColor: "#BF4C58" }]}>
-                <FontAwesomeIcons name={"check"} size={10} color={"#FFF"} />
+              <View style={[styles.oView, {backgroundColor: '#BF4C58'}]}>
+                <FontAwesomeIcons name={'check'} size={10} color={'#FFF'} />
               </View>
               <Spacer width={11} />
-              <Text>{moment(date).format("YYYY-MM-DD")}</Text>
+              <Text>{moment(date).format('YYYY-MM-DD')}</Text>
             </Row>
           )}
           <Spacer height={41} />
           <Row>
-            <Text style={[styles.smTitle, errorIn === 'activeShifts' && { color: 'red' }]}>
-              {langs("modal_status.select_work_time")}
+            <Text
+              style={[
+                styles.smTitle,
+                errorIn === 'activeShifts' && {color: 'red'},
+              ]}>
+              {langs('modal_status.select_work_time')}
             </Text>
           </Row>
           <Spacer height={16} />
@@ -280,8 +284,10 @@ function ModalStatusComponent(props) {
                 // item={{ id: shift.id, from: shift.time_start, to: shift.time_end, start: "am", end: "pm" }}
                 {...shift}
                 onPress={id => {
-                  if(errorIn === 'activeShifts') setErrorIn(state => state = null)
-                  handleSetActive(id)
+                  if (errorIn === 'activeShifts') {
+                    setErrorIn(state => (state = null));
+                  }
+                  handleSetActive(id);
                 }}
                 activeShifts={activeShifts}
               />
@@ -290,38 +296,32 @@ function ModalStatusComponent(props) {
           ))}
           <Spacer height={18} />
           <Text style={styles.chooseTxt}>
-            {langs("modal_status.choose_option")}
+            {langs('modal_status.choose_option')}
           </Text>
           <Spacer height={11} />
           <FlatList
             showsHorizontalScrollIndicator={false}
-            style={{ flex: 1, maxHeight: 75 }}
+            style={{flex: 1, maxHeight: 75}}
             horizontal
             data={features}
-            renderItem={({ item }) => {
+            renderItem={({item}) => {
               const index = _.findIndex(activeFeatures, _id => _id === item.id);
               const isSelected = index !== -1;
               return (
                 <TouchableWithoutFeedback
-                  onPress={() => handleSetActiveFeatures(item.id)}
-                >
+                  onPress={() => handleSetActiveFeatures(item.id)}>
                   <View
                     style={[
                       styles.optionView,
-                      isSelected && { borderColor: "#BF4C58" }
-                    ]}
-                  >
-                    <Image
-                      source={{ uri: item.icon }}
-                      style={styles.iconStyle}
-                    />
+                      isSelected && {borderColor: '#BF4C58'},
+                    ]}>
+                    <Image source={{uri: item.icon}} style={styles.iconStyle} />
                     <Spacer height={12} />
                     <Text
                       style={[
                         styles.itemName,
-                        isSelected && { color: "#BF4C58" }
-                      ]}
-                    >
+                        isSelected && {color: '#BF4C58'},
+                      ]}>
                       {item.name}
                     </Text>
                   </View>
@@ -332,20 +332,18 @@ function ModalStatusComponent(props) {
           />
           <Spacer height={15} />
           <TouchableWithoutFeedback
-            onPress={() => setPerHour(state => (state = !perHour))}
-          >
-            <Row style={{ alignItems: "center" }}>
+            onPress={() => setPerHour(state => (state = !perHour))}>
+            <Row style={{alignItems: 'center'}}>
               <View
                 style={[
                   styles.selectHOption,
-                  { backgroundColor: perHour ? "#BF4C58" : "#FFF" }
-                ]}
-              >
-                <FontAwesomeIcons name={"check"} size={10} color={"#FFF"} />
+                  {backgroundColor: perHour ? '#BF4C58' : '#FFF'},
+                ]}>
+                <FontAwesomeIcons name={'check'} size={10} color={'#FFF'} />
               </View>
               <Spacer width={8} />
               <Text style={styles.selectHText}>
-                {langs("modal_status.availble_per_hour")}
+                {langs('modal_status.availble_per_hour')}
               </Text>
             </Row>
           </TouchableWithoutFeedback>
@@ -354,11 +352,11 @@ function ModalStatusComponent(props) {
       </ScrollView>
       <TouchableWithoutFeedback disabled={loading} onPress={handleAddShift}>
         <View style={styles.btnBtm}>
-          {
-            loading 
-            ? <ActivityIndicator size={'small'} color={'#FFF'}/>
-            : <Text style={styles.btnBtmText}>{langs("modal_status.add")}</Text>
-          }
+          {loading ? (
+            <ActivityIndicator size={'small'} color={'#FFF'} />
+          ) : (
+            <Text style={styles.btnBtmText}>{langs('modal_status.add')}</Text>
+          )}
         </View>
       </TouchableWithoutFeedback>
     </Modal>
@@ -367,183 +365,185 @@ function ModalStatusComponent(props) {
 
 const styles = StyleSheet.create({
   mainView: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: '#FFFFFF',
     borderRadius: 15,
-    shadowOffset: { x: 1, y: 2 },
-    shadowColor: "rgba(93, 93, 93, 0.09)",
-    width: "100%",
+    shadowOffset: {x: 1, y: 2},
+    shadowColor: 'rgba(93, 93, 93, 0.09)',
+    width: '100%',
     height: height - 50,
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
-    alignItems: "flex-start"
+    alignItems: 'flex-start',
   },
   topRow: {
-    alignItems: "center",
-    justifyContent: "space-between",
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingStart: 16,
     paddingEnd: 22,
-    width: "100%"
+    width: '100%',
   },
   titleTxt: {
-    color: "#000000",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#000000',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 18,
-    fontWeight: "500",
+    fontWeight: '500',
     lineHeight: 22,
-    textAlign: "left"
+    textAlign: 'left',
   },
   clndr: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: '#FFFFFF',
     borderRadius: 5,
     // boxShadow: "0 2px 4px 0 rgba(150, 140, 149, 0.05)",
-    shadowOffset: { x: 0, y: 2 },
+    shadowOffset: {x: 0, y: 2},
     shadowOpacity: 0.4,
-    shadowColor: "rgba(150, 140, 149, 0.5)",
+    shadowColor: 'rgba(150, 140, 149, 0.5)',
     elevation: 1,
     width: 40,
     height: 40,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   vBorder: {
     // border: "1px solid #DFDDE0",
     borderWidth: 1,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     borderRadius: 3,
-    width: "auto",
+    width: 'auto',
     height: 39,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   padding16: {
     paddingHorizontal: 16,
-    flex: 1
+    flex: 1,
   },
   smTitle: {
-    color: "#837682",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#837682',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 13,
-    fontWeight: "300",
+    fontWeight: '300',
     lineHeight: 16,
-    textAlign: "left"
+    textAlign: 'left',
   },
   optionContainer: {
     // border: '1px solid #DFDDE0',
     borderWidth: 1,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     borderRadius: 5,
     height: 50,
-    alignItems: "center"
+    alignItems: 'center',
   },
   oView: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: '#FFFFFF',
     borderWidth: 2,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     borderRadius: 11,
     width: 20,
     height: 20,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   optionSep: {
     // border: "1px solid #DFDDE0",
     borderWidth: 1,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     width: 1,
-    height: 30
+    height: 30,
   },
   optionView: {
     // border: "1px solid #DFDDE0",
     borderWidth: 1,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     borderRadius: 5,
     width: 88,
     height: 75,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   selectHOption: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: '#FFFFFF',
     borderWidth: 2,
-    borderColor: "#DFDDE0",
+    borderColor: '#DFDDE0',
     borderRadius: 5,
     width: 22,
     height: 22,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   selectHText: {
-    color: "#786E77",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#786E77',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: '500',
     lineHeight: 16,
-    textAlign: "left"
+    textAlign: 'left',
   },
   btnBtm: {
-    backgroundColor: "#614C55",
-    position: "absolute",
+    backgroundColor: '#614C55',
+    position: 'absolute',
     bottom: 0,
-    width: "100%",
+    width: '100%',
     // minHeight: 96,
     // maxHeight: 96,
     height: 66,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   closeBtn: {
-    padding: 11
+    padding: 11,
   },
   btnBtmText: {
-    color: "#FCFCFC",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#FCFCFC',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 16,
-    fontWeight: "500",
+    fontWeight: '500',
     lineHeight: 19,
-    textAlign: "center"
+    textAlign: 'center',
   },
   fromTxt: {
-    color: "#8C808B",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#8C808B',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 13,
-    fontWeight: "300",
+    fontWeight: '300',
     lineHeight: 16,
-    textAlign: "left"
+    textAlign: 'left',
   },
   numTxt: {
-    color: "#56434B",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#56434B',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 16,
-    fontWeight: "500",
+    fontWeight: '500',
     lineHeight: 19,
-    textAlign: "left"
+    textAlign: 'left',
   },
   chooseTxt: {
-    color: "#837682",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#837682',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 13,
-    fontWeight: "300",
+    fontWeight: '300',
     lineHeight: 16,
-    textAlign: "left"
+    textAlign: 'left',
   },
   iconStyle: {
     width: 24,
-    height: 24
+    height: 24,
   },
   itemName: {
-    color: "#8C808B",
-    fontFamily: "ExpoArabic-Medium",
+    color: '#8C808B',
+    fontFamily: 'ExpoArabic-Medium',
     fontSize: 13,
-    fontWeight: "300",
+    fontWeight: '300',
     lineHeight: 16,
-    textAlign: "center"
-  }
+    textAlign: 'center',
+  },
 });
 
 const mapProps = state => {
   return {
-    user: state.user
-  }
-}
+    user: state.user,
+  };
+};
 
-
-export default connect(mapProps, { addNotification })(ModalStatusComponent);
+export default connect(
+  mapProps,
+  {addNotification},
+)(ModalStatusComponent);
