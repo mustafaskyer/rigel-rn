@@ -1,34 +1,34 @@
-import config from "config";
+import config from 'config';
 
 const stackOptions = {
   navigationOptions: {
     gesturesEnabled: false,
-    headerMode: "none"
-  }
+    headerMode: 'none',
+  },
 };
 
 const options = {
-  headerMode: "none"
+  headerMode: 'none',
 };
 
 const tabsOptions = {
   tabBarOptions: {
-    activeTintColor: "#e91e63",
+    activeTintColor: '#e91e63',
     labelStyle: {
-      fontSize: 12
+      fontSize: 12,
     },
     style: {
-      borderWidth: 1
-    }
-  }
+      borderWidth: 1,
+    },
+  },
 };
 
 const drawerOptions = {
-  drawerBackgroundColor: "#FFF",
-  drawerType: "front",
-  overlayColor: "#FFF",
+  drawerBackgroundColor: '#FFF',
+  drawerType: 'front',
+  overlayColor: '#FFF',
   // drawerLockMode: 'unlocked',
-  drawerWidth: 300
+  drawerWidth: 300,
 };
 
 function build(tabs, drawer) {
@@ -41,4 +41,4 @@ function build(tabs, drawer) {
   }
   return obj;
 }
-module.exports = { options, stackOptions, tabsOptions, drawerOptions, build };
+module.exports = {options, stackOptions, tabsOptions, drawerOptions, build};
