@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { Text, View, StyleSheet, TouchableWithoutFeedback } from "react-native";
-import Animated from "react-native-reanimated";
-import MaterialIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import runTiming from "util/animations/runTiming";
-import { connect } from "react-redux";
-import { clearNotifications } from "redux-actions";
+import React, {useEffect} from 'react';
+import {Text, View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
+import Animated from 'react-native-reanimated';
+import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import runTiming from 'util/animations/runTiming';
+import {connect} from 'react-redux';
+import {clearNotifications} from 'redux-actions';
 
-const { interpolate, Clock, Extrapolate, concat, Value } = Animated;
+const {interpolate, Clock, Extrapolate, concat, Value} = Animated;
 
 class NComp extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class NComp extends React.Component {
     this._watchClear = null;
     this.state = {
       trans: new Value(-300),
-      rotate: new Value(0)
+      rotate: new Value(0),
     };
   }
 
@@ -22,19 +22,19 @@ class NComp extends React.Component {
     if (nextProps.notifications.payload) {
       if (this.state.rotate === 0) {
         this.setState({
-          trans: runTiming(new Clock(), 0, -300, 750)
+          trans: runTiming(new Clock(), 0, -300, 750),
         });
       }
       this.setState(
         {
           trans: runTiming(new Clock(this.state.rotate), -300, 0, 750),
-          rotate: runTiming(new Clock(), 0, 1, 1750)
+          rotate: runTiming(new Clock(), 0, 1, 1750),
         },
         () => {
           this._watchClear = setTimeout(() => {
-            this.setState({ trans: new Value(-300), rotate: new Value(0) });
+            this.setState({trans: new Value(-300), rotate: new Value(0)});
           }, 5000);
-        }
+        },
       );
     }
   }
@@ -52,51 +52,44 @@ class NComp extends React.Component {
     this.scaleY = interpolate(this.state.trans, {
       inputRange: [-300, -50, 0],
       outputRange: [0, 0, 1],
-      extrapolate: Extrapolate.CLAMP
+      extrapolate: Extrapolate.CLAMP,
     });
     this.rotateInterpolate = interpolate(this.state.rotate, {
       inputRange: [0, 0.3, 0.7, 0.9, 1],
       outputRange: [-45, 45, -45, 0, 20],
-      extrapolate: Extrapolate.CLAMP
+      extrapolate: Extrapolate.CLAMP,
     });
     this.textFadeInterpolate = interpolate(this.state.rotate, {
       inputRange: [0, 1],
       outputRange: [0, 1],
-      extrapolate: Extrapolate.CLAMP
+      extrapolate: Extrapolate.CLAMP,
     });
     return (
       <Animated.View
         style={[
           styles.container,
-          { top: this.state.trans, transform: [{ scaleY: this.scaleY }] },
+          {top: this.state.trans, transform: [{scaleY: this.scaleY}]},
           this.props.notifications.payload &&
-            this.props.notifications.payload.type === "error" && {
-              backgroundColor: "red"
-            }
-        ]}
-      >
+            this.props.notifications.payload.type === 'error' && {
+              backgroundColor: 'red',
+            },
+        ]}>
         <TouchableWithoutFeedback
           onPress={() => {
-            this.setState({ trans: runTiming(new Clock(), 0, -300, 750) });
-          }}
-        >
+            this.setState({trans: runTiming(new Clock(), 0, -300, 750)});
+          }}>
           <View style={styles.bar}>
             <Animated.View
               style={{
-                transform: [{ rotate: concat(this.rotateInterpolate, "deg") }],
-                opacity: this.textFadeInterpolate
-              }}
-            >
+                transform: [{rotate: concat(this.rotateInterpolate, 'deg')}],
+                opacity: this.textFadeInterpolate,
+              }}>
               <MaterialIcons name="bell-ring" size={19} color="#FFF" />
             </Animated.View>
             <View style={styles.textView}>
               {this.props.notifications.payload && (
                 <Animated.Text
-                  style={[
-                    styles.barText,
-                    { opacity: this.textFadeInterpolate }
-                  ]}
-                >
+                  style={[styles.barText, {opacity: this.textFadeInterpolate}]}>
                   {this.props.notifications.payload.message}
                 </Animated.Text>
               )}
@@ -110,39 +103,39 @@ class NComp extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: '100%',
     height: 40,
-    backgroundColor: "green"
+    backgroundColor: 'green',
   },
   bar: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingStart: 11,
     flex: 1,
-    width: "100%"
+    width: '100%',
   },
   barText: {
     fontSize: 15,
-    color: "#FFF",
+    color: '#FFF',
     // paddingStart: 11,
-    textAlign: "center",
-    alignSelf: "center"
+    textAlign: 'center',
+    alignSelf: 'center',
   },
   textView: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingEnd: 30
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingEnd: 30,
+  },
 });
 
 const mapProps = state => {
   return {
-    notifications: state.notifications
+    notifications: state.notifications,
   };
 };
 
 export default connect(
   mapProps,
-  { clearNotifications }
+  {clearNotifications},
 )(NComp);
