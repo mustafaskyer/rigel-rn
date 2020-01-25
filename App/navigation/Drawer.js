@@ -18,7 +18,7 @@ const Drawer = props => {
         keyboardDismissMode="on-drag"
         drawerType={'front'}
         useNativeAnimations={true}
-        renderNavigationView={renderDrawer()}
+        renderNavigationView={() => <View />}
         contentContainerStyle={Platform.select({
           ios: styles.contentContainerStyleIos,
           android: styles.contentContainerStyleAndroid,
