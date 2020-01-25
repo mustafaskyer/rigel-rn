@@ -1,9 +1,9 @@
-import ReactNative from "react-native";
-import I18n from "react-native-i18n";
+import react from 'react';
+import I18n from 'react-native-i18n';
 
 // Import all locales
-import tr from "./tr.js";
-import ar from "./ar.js";
+import tr from './tr.js';
+import ar from './ar.js';
 
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
