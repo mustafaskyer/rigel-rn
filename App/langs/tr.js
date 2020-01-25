@@ -1,4 +1,3 @@
 export default {
-    Hello: "Merhaba"
-  };
-  
+  Hello: 'Merhaba',
+};
