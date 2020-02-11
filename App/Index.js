@@ -1,8 +1,8 @@
-import React, {useEffect, useCallback, useState} from 'react';
-import {View, Text} from 'react-native';
+import React, { useEffect, useCallback, useState } from 'react';
+import { View, Text } from 'react-native';
 import styles from 'styles/public';
-import {connect} from 'react-redux';
-import {loadUserImgs} from 'redux-actions/usersAction';
+import { connect } from 'react-redux';
+import { loadUserImgs } from 'redux-actions/usersAction';
 
 // components
 import RenderImage from 'components/RenderImage';
@@ -18,10 +18,10 @@ const Index = props => {
   }, [images]);
   return (
     props.users && (
-      <View style={[styles.full, styles.fullcenter, {paddingTop: 44}]}>
+      <View style={[styles.full, styles.fullcenter, { paddingTop: 44 }]}>
         <RenderImage
           navToDetail={(item, index) =>
-            props.navigation.navigate('Detail', {item, index})
+            props.navigation.navigate('Detail', { item, index })
           }
           images={images}
         />
@@ -37,5 +37,5 @@ const mapProps = state => {
 };
 export default connect(
   mapProps,
-  {loadUserImgs},
+  { loadUserImgs },
 )(Index);
