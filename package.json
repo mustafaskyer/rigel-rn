@@ -14,7 +14,6 @@
     "@react-native-community/cameraroll": "^1.2.1",
     "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/netinfo": "^4.4.0",
-    "@react-native-mapbox-gl/maps": "^7.0.6",
     "@turf/turf": "^5.1.6",
     "add": "^2.0.6",
     "apisauce": "^1.1.1",
