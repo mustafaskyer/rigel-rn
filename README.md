@@ -1,2 +1,0 @@
-### React Native Starter App
-
