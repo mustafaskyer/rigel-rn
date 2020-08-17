@@ -20,7 +20,7 @@
     "flubber": "^0.4.2",
     "immer": "^4.0.1",
     "immutable": "^4.0.0-rc.12",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mapbox": "^1.0.0-beta10",
     "pusher-js": "^5.0.2",
     "ramda": "^0.26.1",
