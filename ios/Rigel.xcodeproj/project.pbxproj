@@ -7,25 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B8985BFC15B08AB77659106 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC58B4F016D5C44D5CD1E708 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		44157C59234D2CAD00D1DA2B /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 44157C58234D2CAD00D1DA2B /* NotificationService.m */; };
-		44157C5D234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44157C55234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5BCBED900E676CDF69F19EB5 /* libPods-SkyerStarterRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751D5E2E3F2216D29AAD9E7 /* libPods-SkyerStarterRN.a */; };
+		5BCBED900E676CDF69F19EB5 /* libPods-Rigel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751D5E2E3F2216D29AAD9E7 /* libPods-Rigel.a */; };
+		665118CC24EA75120071B7AE /* file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665118CB24EA75120071B7AE /* file.swift */; };
+		665118CE24EA76490071B7AE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665118CD24EA76490071B7AE /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		44157C5B234D2CAD00D1DA2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 44157C54234D2CAD00D1DA2B;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		44157C61234D2CAD00D1DA2B /* Embed App Extensions */ = {
@@ -34,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				44157C5D234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,36 +31,33 @@
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* SkyerStarterRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyerStarterRNTests.m; sourceTree = "<group>"; };
-		0B18DEF5EE36E0354FABA470 /* Pods-SkyerStarterRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRNTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRNTests/Pods-SkyerStarterRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		10922C28259B89CCCD42D47A /* libPods-SkyerStarterRN-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRN-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* RigelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RigelTests.m; sourceTree = "<group>"; };
+		0B18DEF5EE36E0354FABA470 /* Pods-RigelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RigelTests.debug.xcconfig"; path = "Target Support Files/Pods-RigelTests/Pods-RigelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		10922C28259B89CCCD42D47A /* libPods-Rigel-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rigel-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Rigel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rigel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SkyerStarterRN/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SkyerStarterRN/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SkyerStarterRN/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SkyerStarterRN/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SkyerStarterRN/main.m; sourceTree = "<group>"; };
-		1751D5E2E3F2216D29AAD9E7 /* libPods-SkyerStarterRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Rigel/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Rigel/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Rigel/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Rigel/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Rigel/main.m; sourceTree = "<group>"; };
+		1751D5E2E3F2216D29AAD9E7 /* libPods-Rigel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rigel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7C5A14106F0A080952BCAA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		33B99450C3A8E932000B3A8D /* Pods-SkyerStarterRN-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN-tvOS/Pods-SkyerStarterRN-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		384AB32147005DE5535BC0B3 /* libPods-SkyerStarterRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44157C55234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		44157C57234D2CAD00D1DA2B /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		44157C58234D2CAD00D1DA2B /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		44157C5A234D2CAD00D1DA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44157C62234D2D3400D1DA2B /* Makan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Makan.entitlements; path = SkyerStarterRN/Makan.entitlements; sourceTree = "<group>"; };
-		44157C63234D2D3B00D1DA2B /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
-		55CEFDEEEC05A845E152A4CB /* Pods-SkyerStarterRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN-tvOSTests/Pods-SkyerStarterRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		68F968830F2A479A014C3D69 /* Pods-SkyerStarterRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN.debug.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN/Pods-SkyerStarterRN.debug.xcconfig"; sourceTree = "<group>"; };
-		8C69A2D64E7BA88E84DEDCAF /* Pods-SkyerStarterRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN.release.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN/Pods-SkyerStarterRN.release.xcconfig"; sourceTree = "<group>"; };
+		33B99450C3A8E932000B3A8D /* Pods-Rigel-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Rigel-tvOS/Pods-Rigel-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		384AB32147005DE5535BC0B3 /* libPods-Rigel-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rigel-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44157C62234D2D3400D1DA2B /* Makan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Makan.entitlements; path = Rigel/Makan.entitlements; sourceTree = "<group>"; };
+		55CEFDEEEC05A845E152A4CB /* Pods-Rigel-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Rigel-tvOSTests/Pods-Rigel-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		665118CA24EA75110071B7AE /* Rigel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rigel-Bridging-Header.h"; sourceTree = "<group>"; };
+		665118CB24EA75120071B7AE /* file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file.swift; sourceTree = "<group>"; };
+		665118CD24EA76490071B7AE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		68F968830F2A479A014C3D69 /* Pods-Rigel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel.debug.xcconfig"; path = "Target Support Files/Pods-Rigel/Pods-Rigel.debug.xcconfig"; sourceTree = "<group>"; };
+		8C69A2D64E7BA88E84DEDCAF /* Pods-Rigel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel.release.xcconfig"; path = "Target Support Files/Pods-Rigel/Pods-Rigel.release.xcconfig"; sourceTree = "<group>"; };
 		A4F852555AB62A2AE6D8BA6E /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		BC58B4F016D5C44D5CD1E708 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD4A3FB0AB6B00712BB6CE9A /* libPods-SkyerStarterRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C839CE3E9212DA61F08A7355 /* Pods-SkyerStarterRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN-tvOS/Pods-SkyerStarterRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		D459D86A1C767467978A9A99 /* Pods-SkyerStarterRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRNTests.release.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRNTests/Pods-SkyerStarterRNTests.release.xcconfig"; sourceTree = "<group>"; };
-		E332CAE2FD1EAEF9C3621FAA /* Pods-SkyerStarterRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyerStarterRN-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyerStarterRN-tvOSTests/Pods-SkyerStarterRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E3DBBBE42B93D1AC1AF5A3BC /* libPods-SkyerStarterRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyerStarterRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4A3FB0AB6B00712BB6CE9A /* libPods-RigelTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RigelTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C839CE3E9212DA61F08A7355 /* Pods-Rigel-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Rigel-tvOS/Pods-Rigel-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		D459D86A1C767467978A9A99 /* Pods-RigelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RigelTests.release.xcconfig"; path = "Target Support Files/Pods-RigelTests/Pods-RigelTests.release.xcconfig"; sourceTree = "<group>"; };
+		E332CAE2FD1EAEF9C3621FAA /* Pods-Rigel-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rigel-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Rigel-tvOSTests/Pods-Rigel-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3DBBBE42B93D1AC1AF5A3BC /* libPods-Rigel-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rigel-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -83,28 +67,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BCBED900E676CDF69F19EB5 /* libPods-SkyerStarterRN.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44157C52234D2CAD00D1DA2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B8985BFC15B08AB77659106 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
+				5BCBED900E676CDF69F19EB5 /* libPods-Rigel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* SkyerStarterRNTests */ = {
+		00E356EF1AD99517003FC87E /* RigelTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* SkyerStarterRNTests.m */,
+				00E356F21AD99517003FC87E /* RigelTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = SkyerStarterRNTests;
+			path = RigelTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -115,7 +91,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* SkyerStarterRN */ = {
+		13B07FAE1A68108700A75B9A /* Rigel */ = {
 			isa = PBXGroup;
 			children = (
 				44157C62234D2D3400D1DA2B /* Makan.entitlements */,
@@ -124,10 +100,12 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				665118CB24EA75120071B7AE /* file.swift */,
+				665118CA24EA75110071B7AE /* Rigel-Bridging-Header.h */,
+				665118CD24EA76490071B7AE /* Launch Screen.storyboard */,
 			);
-			name = SkyerStarterRN;
+			name = Rigel;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -135,11 +113,11 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				1751D5E2E3F2216D29AAD9E7 /* libPods-SkyerStarterRN.a */,
-				384AB32147005DE5535BC0B3 /* libPods-SkyerStarterRN-tvOS.a */,
-				E3DBBBE42B93D1AC1AF5A3BC /* libPods-SkyerStarterRN-tvOSTests.a */,
-				BD4A3FB0AB6B00712BB6CE9A /* libPods-SkyerStarterRNTests.a */,
-				10922C28259B89CCCD42D47A /* libPods-SkyerStarterRN-OneSignalNotificationServiceExtension.a */,
+				1751D5E2E3F2216D29AAD9E7 /* libPods-Rigel.a */,
+				384AB32147005DE5535BC0B3 /* libPods-Rigel-tvOS.a */,
+				E3DBBBE42B93D1AC1AF5A3BC /* libPods-Rigel-tvOSTests.a */,
+				BD4A3FB0AB6B00712BB6CE9A /* libPods-RigelTests.a */,
+				10922C28259B89CCCD42D47A /* libPods-Rigel-OneSignalNotificationServiceExtension.a */,
 				BC58B4F016D5C44D5CD1E708 /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
@@ -148,29 +126,18 @@
 		38C08EA59AE71E677743C507 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				68F968830F2A479A014C3D69 /* Pods-SkyerStarterRN.debug.xcconfig */,
-				8C69A2D64E7BA88E84DEDCAF /* Pods-SkyerStarterRN.release.xcconfig */,
-				33B99450C3A8E932000B3A8D /* Pods-SkyerStarterRN-tvOS.debug.xcconfig */,
-				C839CE3E9212DA61F08A7355 /* Pods-SkyerStarterRN-tvOS.release.xcconfig */,
-				E332CAE2FD1EAEF9C3621FAA /* Pods-SkyerStarterRN-tvOSTests.debug.xcconfig */,
-				55CEFDEEEC05A845E152A4CB /* Pods-SkyerStarterRN-tvOSTests.release.xcconfig */,
-				0B18DEF5EE36E0354FABA470 /* Pods-SkyerStarterRNTests.debug.xcconfig */,
-				D459D86A1C767467978A9A99 /* Pods-SkyerStarterRNTests.release.xcconfig */,
+				68F968830F2A479A014C3D69 /* Pods-Rigel.debug.xcconfig */,
+				8C69A2D64E7BA88E84DEDCAF /* Pods-Rigel.release.xcconfig */,
+				33B99450C3A8E932000B3A8D /* Pods-Rigel-tvOS.debug.xcconfig */,
+				C839CE3E9212DA61F08A7355 /* Pods-Rigel-tvOS.release.xcconfig */,
+				E332CAE2FD1EAEF9C3621FAA /* Pods-Rigel-tvOSTests.debug.xcconfig */,
+				55CEFDEEEC05A845E152A4CB /* Pods-Rigel-tvOSTests.release.xcconfig */,
+				0B18DEF5EE36E0354FABA470 /* Pods-RigelTests.debug.xcconfig */,
+				D459D86A1C767467978A9A99 /* Pods-RigelTests.release.xcconfig */,
 				A4F852555AB62A2AE6D8BA6E /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
 				1C7C5A14106F0A080952BCAA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		44157C56234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXGroup;
-			children = (
-				44157C63234D2D3B00D1DA2B /* OneSignalNotificationServiceExtension.entitlements */,
-				44157C57234D2CAD00D1DA2B /* NotificationService.h */,
-				44157C58234D2CAD00D1DA2B /* NotificationService.m */,
-				44157C5A234D2CAD00D1DA2B /* Info.plist */,
-			);
-			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		69DFD81C1FEC4A05ABC84CDD /* Resources */ = {
@@ -190,10 +157,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* SkyerStarterRN */,
+				13B07FAE1A68108700A75B9A /* Rigel */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* SkyerStarterRNTests */,
-				44157C56234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */,
+				00E356EF1AD99517003FC87E /* RigelTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				38C08EA59AE71E677743C507 /* Pods */,
@@ -208,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* Rigel.app */,
-				44157C55234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* SkyerStarterRN */ = {
+		13B07F861A680F5B00A75B9A /* Rigel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SkyerStarterRN" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Rigel" */;
 			buildPhases = (
 				715A513CD8E21CCE3A896212 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -232,30 +197,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				44157C5C234D2CAD00D1DA2B /* PBXTargetDependency */,
 			);
-			name = SkyerStarterRN;
-			productName = SkyerStarterRN;
+			name = Rigel;
+			productName = Rigel;
 			productReference = 13B07F961A680F5B00A75B9A /* Rigel.app */;
 			productType = "com.apple.product-type.application";
-		};
-		44157C54234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44157C5E234D2CAD00D1DA2B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
-			buildPhases = (
-				F2FE0A69806906543EBED6B1 /* [CP] Check Pods Manifest.lock */,
-				44157C51234D2CAD00D1DA2B /* Sources */,
-				44157C52234D2CAD00D1DA2B /* Frameworks */,
-				44157C53234D2CAD00D1DA2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OneSignalNotificationServiceExtension;
-			productName = OneSignalNotificationServiceExtension;
-			productReference = 44157C55234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -267,16 +213,12 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = SGQP26F456;
-					};
-					44157C54234D2CAD00D1DA2B = {
-						CreatedOnToolsVersion = 11.0;
-						DevelopmentTeam = SGQP26F456;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 57G7PTM543;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SkyerStarterRN" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Rigel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -290,8 +232,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* SkyerStarterRN */,
-				44157C54234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */,
+				13B07F861A680F5B00A75B9A /* Rigel */,
 			);
 		};
 /* End PBXProject section */
@@ -301,15 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665118CE24EA76490071B7AE /* Launch Screen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44157C53234D2CAD00D1DA2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +279,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SkyerStarterRN-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Rigel-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,7 +292,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SkyerStarterRN/Pods-SkyerStarterRN-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Rigel/Pods-Rigel-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/QBImagePickerController/QBImagePicker.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
@@ -378,6 +312,7 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -400,32 +335,11 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyerStarterRN/Pods-SkyerStarterRN-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2FE0A69806906543EBED6B1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rigel/Pods-Rigel-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -455,51 +369,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				665118CC24EA75120071B7AE /* file.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44157C51234D2CAD00D1DA2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44157C59234D2CAD00D1DA2B /* NotificationService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		44157C5C234D2CAD00D1DA2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 44157C54234D2CAD00D1DA2B /* OneSignalNotificationServiceExtension */;
-			targetProxy = 44157C5B234D2CAD00D1DA2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = SkyerStarterRN;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68F968830F2A479A014C3D69 /* Pods-SkyerStarterRN.debug.xcconfig */;
+			baseConfigurationReference = 68F968830F2A479A014C3D69 /* Pods-Rigel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SkyerStarterRN/Makan.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Rigel/Makan.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = SGQP26F456;
-				INFOPLIST_FILE = SkyerStarterRN/Info.plist;
+				DEVELOPMENT_TEAM = 57G7PTM543;
+				INFOPLIST_FILE = Rigel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
@@ -507,21 +395,25 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new;
+				PRODUCT_BUNDLE_IDENTIFIER = "rigel-core.app.ios";
 				PRODUCT_NAME = Rigel;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rigel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C69A2D64E7BA88E84DEDCAF /* Pods-SkyerStarterRN.release.xcconfig */;
+			baseConfigurationReference = 8C69A2D64E7BA88E84DEDCAF /* Pods-Rigel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SkyerStarterRN/Makan.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Rigel/Makan.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SGQP26F456;
-				INFOPLIST_FILE = SkyerStarterRN/Info.plist;
+				DEVELOPMENT_TEAM = 57G7PTM543;
+				INFOPLIST_FILE = Rigel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
@@ -529,67 +421,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new;
+				PRODUCT_BUNDLE_IDENTIFIER = "rigel-core.app.ios";
 				PRODUCT_NAME = Rigel;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rigel-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		44157C5F234D2CAD00D1DA2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4F852555AB62A2AE6D8BA6E /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = SGQP26F456;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.5.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new.OneSignalNotificationServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		44157C60234D2CAD00D1DA2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C7C5A14106F0A080952BCAA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SGQP26F456;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.5.0;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = zeem.makan.sa.new.OneSignalNotificationServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -695,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SkyerStarterRN" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Rigel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -704,16 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44157C5E234D2CAD00D1DA2B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				44157C5F234D2CAD00D1DA2B /* Debug */,
-				44157C60234D2CAD00D1DA2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SkyerStarterRN" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Rigel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

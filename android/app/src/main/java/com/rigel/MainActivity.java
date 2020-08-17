@@ -1,4 +1,4 @@
-package com.skyerstarterrn;
+package com.rigel;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "SkyerStarterRN";
+    return "Rigel";
   }
   // @Override
   // protected void onCreate(Bundle savedInstanceState) {
